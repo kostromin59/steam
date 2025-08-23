@@ -32,7 +32,7 @@ fi
 
 for proto_file in $PROTO_FILES; do
     filename=$(basename $proto_file)
-    CUR_CMD="protoc -I=$PROTO_DIR --go_out=$OUTPUT_DIR \
+    CMD="protoc -I=$PROTO_DIR --go_out=$OUTPUT_DIR \
     --go_opt=M$filename=webuipb/  \
     --go_opt=Mcommon.proto=webuipb/ \
     --go_opt=Mcommon_base.proto=webuipb/ \
@@ -40,6 +40,6 @@ for proto_file in $PROTO_FILES; do
     proto/steamdatabase/webui/common_base.proto \
     $proto_file"
 
-    echo "$CUR_CMD"
-    eval $CUR_CMD
+    echo "$CMD"
+    eval $CMD
 done
