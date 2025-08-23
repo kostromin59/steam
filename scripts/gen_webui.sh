@@ -30,8 +30,6 @@ if [ -z "$PROTO_FILES" ]; then
     exit 1
 fi
 
-CMD="protoc -I=$PROTO_DIR --go_out=$OUTPUT_DIR"
-
 for proto_file in $PROTO_FILES; do
     filename=$(basename $proto_file)
     CUR_CMD="protoc -I=$PROTO_DIR --go_out=$OUTPUT_DIR \
