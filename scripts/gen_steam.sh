@@ -46,20 +46,20 @@ build_protoc_command() {
     local filename=$(basename "$proto_file")
     local cmd="protoc -I=$PROTO_DIR --go_out=$OUTPUT_DIR"
     
-    cmd="$cmd --go_opt=M$filename=go/steampb"
+    cmd="$cmd --go_opt=M$filename=steampb/"
     
     local dependencies=$(get_dependencies "$proto_file")
     
     while IFS= read -r dep; do
         if [ -n "$dep" ]; then
-            cmd="$cmd --go_opt=M$dep=go/steampb"
+            cmd="$cmd --go_opt=M$dep=steampb/"
         fi
     done <<< "$dependencies"
     
-    cmd="$cmd --go_opt=Menums.proto=go/steampb \
-    --go_opt=Mcontenthubs.proto=go/steampb \
-    --go_opt=Msteamnetworkingsockets_messages_certs.proto=go/steampb \
-    --go_opt=Menums_productinfo.proto=go/steampb \
+    cmd="$cmd --go_opt=Menums.proto=steampb/ \
+    --go_opt=Mcontenthubs.proto=steampb/ \
+    --go_opt=Msteamnetworkingsockets_messages_certs.proto=steampb/ \
+    --go_opt=Menums_productinfo.proto=steampb/ \
     proto/steamdatabase/steam/steamnetworkingsockets_messages_certs.proto \
     proto/steamdatabase/steam/contenthubs.proto \
     proto/steamdatabase/steam/enums_productinfo.proto \
@@ -73,6 +73,5 @@ build_protoc_command() {
 for proto_file in $PROTO_FILES; do
     CMD=$(build_protoc_command "$proto_file")
     echo "$CMD"
-    echo ""
     eval $CMD
 done

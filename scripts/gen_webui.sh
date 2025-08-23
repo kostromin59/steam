@@ -35,9 +35,9 @@ CMD="protoc -I=$PROTO_DIR --go_out=$OUTPUT_DIR"
 for proto_file in $PROTO_FILES; do
     filename=$(basename $proto_file)
     CUR_CMD="protoc -I=$PROTO_DIR --go_out=$OUTPUT_DIR \
-    --go_opt=M$filename=go/webuipb  \
-    --go_opt=Mcommon.proto=go/webuipb \
-    --go_opt=Mcommon_base.proto=go/webuipb \
+    --go_opt=M$filename=webuipb/  \
+    --go_opt=Mcommon.proto=webuipb/ \
+    --go_opt=Mcommon_base.proto=webuipb/ \
     proto/steamdatabase/webui/common.proto \
     proto/steamdatabase/webui/common_base.proto \
     $proto_file"
