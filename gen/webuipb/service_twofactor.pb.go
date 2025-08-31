@@ -851,102 +851,6 @@ func (x *CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response) GetSuccess() 
 	return false
 }
 
-type CTwoFactor_SendEmail_Request struct {
-	state                 protoimpl.MessageState `protogen:"open.v1"`
-	Steamid               *uint64                `protobuf:"fixed64,1,opt,name=steamid" json:"steamid,omitempty"`
-	EmailType             *uint32                `protobuf:"varint,2,opt,name=email_type,json=emailType" json:"email_type,omitempty"`
-	IncludeActivationCode *bool                  `protobuf:"varint,3,opt,name=include_activation_code,json=includeActivationCode" json:"include_activation_code,omitempty"`
-	unknownFields         protoimpl.UnknownFields
-	sizeCache             protoimpl.SizeCache
-}
-
-func (x *CTwoFactor_SendEmail_Request) Reset() {
-	*x = CTwoFactor_SendEmail_Request{}
-	mi := &file_service_twofactor_proto_msgTypes[11]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *CTwoFactor_SendEmail_Request) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*CTwoFactor_SendEmail_Request) ProtoMessage() {}
-
-func (x *CTwoFactor_SendEmail_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_twofactor_proto_msgTypes[11]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use CTwoFactor_SendEmail_Request.ProtoReflect.Descriptor instead.
-func (*CTwoFactor_SendEmail_Request) Descriptor() ([]byte, []int) {
-	return file_service_twofactor_proto_rawDescGZIP(), []int{11}
-}
-
-func (x *CTwoFactor_SendEmail_Request) GetSteamid() uint64 {
-	if x != nil && x.Steamid != nil {
-		return *x.Steamid
-	}
-	return 0
-}
-
-func (x *CTwoFactor_SendEmail_Request) GetEmailType() uint32 {
-	if x != nil && x.EmailType != nil {
-		return *x.EmailType
-	}
-	return 0
-}
-
-func (x *CTwoFactor_SendEmail_Request) GetIncludeActivationCode() bool {
-	if x != nil && x.IncludeActivationCode != nil {
-		return *x.IncludeActivationCode
-	}
-	return false
-}
-
-type CTwoFactor_SendEmail_Response struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
-func (x *CTwoFactor_SendEmail_Response) Reset() {
-	*x = CTwoFactor_SendEmail_Response{}
-	mi := &file_service_twofactor_proto_msgTypes[12]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *CTwoFactor_SendEmail_Response) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*CTwoFactor_SendEmail_Response) ProtoMessage() {}
-
-func (x *CTwoFactor_SendEmail_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_twofactor_proto_msgTypes[12]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use CTwoFactor_SendEmail_Response.ProtoReflect.Descriptor instead.
-func (*CTwoFactor_SendEmail_Response) Descriptor() ([]byte, []int) {
-	return file_service_twofactor_proto_rawDescGZIP(), []int{12}
-}
-
 type CTwoFactor_Status_Request struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Steamid       *uint64                `protobuf:"fixed64,1,opt,name=steamid" json:"steamid,omitempty"`
@@ -957,7 +861,7 @@ type CTwoFactor_Status_Request struct {
 
 func (x *CTwoFactor_Status_Request) Reset() {
 	*x = CTwoFactor_Status_Request{}
-	mi := &file_service_twofactor_proto_msgTypes[13]
+	mi := &file_service_twofactor_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -969,7 +873,7 @@ func (x *CTwoFactor_Status_Request) String() string {
 func (*CTwoFactor_Status_Request) ProtoMessage() {}
 
 func (x *CTwoFactor_Status_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_twofactor_proto_msgTypes[13]
+	mi := &file_service_twofactor_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -982,7 +886,7 @@ func (x *CTwoFactor_Status_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CTwoFactor_Status_Request.ProtoReflect.Descriptor instead.
 func (*CTwoFactor_Status_Request) Descriptor() ([]byte, []int) {
-	return file_service_twofactor_proto_rawDescGZIP(), []int{13}
+	return file_service_twofactor_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *CTwoFactor_Status_Request) GetSteamid() uint64 {
@@ -1023,7 +927,7 @@ type CTwoFactor_Status_Response struct {
 
 func (x *CTwoFactor_Status_Response) Reset() {
 	*x = CTwoFactor_Status_Response{}
-	mi := &file_service_twofactor_proto_msgTypes[14]
+	mi := &file_service_twofactor_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1035,7 +939,7 @@ func (x *CTwoFactor_Status_Response) String() string {
 func (*CTwoFactor_Status_Response) ProtoMessage() {}
 
 func (x *CTwoFactor_Status_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_twofactor_proto_msgTypes[14]
+	mi := &file_service_twofactor_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1048,7 +952,7 @@ func (x *CTwoFactor_Status_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CTwoFactor_Status_Response.ProtoReflect.Descriptor instead.
 func (*CTwoFactor_Status_Response) Descriptor() ([]byte, []int) {
-	return file_service_twofactor_proto_rawDescGZIP(), []int{14}
+	return file_service_twofactor_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *CTwoFactor_Status_Response) GetState() uint32 {
@@ -1172,7 +1076,7 @@ type CTwoFactor_Time_Request struct {
 
 func (x *CTwoFactor_Time_Request) Reset() {
 	*x = CTwoFactor_Time_Request{}
-	mi := &file_service_twofactor_proto_msgTypes[15]
+	mi := &file_service_twofactor_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1184,7 +1088,7 @@ func (x *CTwoFactor_Time_Request) String() string {
 func (*CTwoFactor_Time_Request) ProtoMessage() {}
 
 func (x *CTwoFactor_Time_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_twofactor_proto_msgTypes[15]
+	mi := &file_service_twofactor_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1197,7 +1101,7 @@ func (x *CTwoFactor_Time_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CTwoFactor_Time_Request.ProtoReflect.Descriptor instead.
 func (*CTwoFactor_Time_Request) Descriptor() ([]byte, []int) {
-	return file_service_twofactor_proto_rawDescGZIP(), []int{15}
+	return file_service_twofactor_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *CTwoFactor_Time_Request) GetSenderTime() uint64 {
@@ -1224,7 +1128,7 @@ type CTwoFactor_Time_Response struct {
 
 func (x *CTwoFactor_Time_Response) Reset() {
 	*x = CTwoFactor_Time_Response{}
-	mi := &file_service_twofactor_proto_msgTypes[16]
+	mi := &file_service_twofactor_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1236,7 +1140,7 @@ func (x *CTwoFactor_Time_Response) String() string {
 func (*CTwoFactor_Time_Response) ProtoMessage() {}
 
 func (x *CTwoFactor_Time_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_twofactor_proto_msgTypes[16]
+	mi := &file_service_twofactor_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1249,7 +1153,7 @@ func (x *CTwoFactor_Time_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CTwoFactor_Time_Response.ProtoReflect.Descriptor instead.
 func (*CTwoFactor_Time_Response) Descriptor() ([]byte, []int) {
-	return file_service_twofactor_proto_rawDescGZIP(), []int{16}
+	return file_service_twofactor_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *CTwoFactor_Time_Response) GetServerTime() uint64 {
@@ -1326,7 +1230,7 @@ type CTwoFactor_UpdateTokenVersion_Request struct {
 
 func (x *CTwoFactor_UpdateTokenVersion_Request) Reset() {
 	*x = CTwoFactor_UpdateTokenVersion_Request{}
-	mi := &file_service_twofactor_proto_msgTypes[17]
+	mi := &file_service_twofactor_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1338,7 +1242,7 @@ func (x *CTwoFactor_UpdateTokenVersion_Request) String() string {
 func (*CTwoFactor_UpdateTokenVersion_Request) ProtoMessage() {}
 
 func (x *CTwoFactor_UpdateTokenVersion_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_twofactor_proto_msgTypes[17]
+	mi := &file_service_twofactor_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1351,7 +1255,7 @@ func (x *CTwoFactor_UpdateTokenVersion_Request) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use CTwoFactor_UpdateTokenVersion_Request.ProtoReflect.Descriptor instead.
 func (*CTwoFactor_UpdateTokenVersion_Request) Descriptor() ([]byte, []int) {
-	return file_service_twofactor_proto_rawDescGZIP(), []int{17}
+	return file_service_twofactor_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *CTwoFactor_UpdateTokenVersion_Request) GetSteamid() uint64 {
@@ -1383,7 +1287,7 @@ type CTwoFactor_UpdateTokenVersion_Response struct {
 
 func (x *CTwoFactor_UpdateTokenVersion_Response) Reset() {
 	*x = CTwoFactor_UpdateTokenVersion_Response{}
-	mi := &file_service_twofactor_proto_msgTypes[18]
+	mi := &file_service_twofactor_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1395,7 +1299,7 @@ func (x *CTwoFactor_UpdateTokenVersion_Response) String() string {
 func (*CTwoFactor_UpdateTokenVersion_Response) ProtoMessage() {}
 
 func (x *CTwoFactor_UpdateTokenVersion_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_twofactor_proto_msgTypes[18]
+	mi := &file_service_twofactor_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1408,7 +1312,7 @@ func (x *CTwoFactor_UpdateTokenVersion_Response) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use CTwoFactor_UpdateTokenVersion_Response.ProtoReflect.Descriptor instead.
 func (*CTwoFactor_UpdateTokenVersion_Response) Descriptor() ([]byte, []int) {
-	return file_service_twofactor_proto_rawDescGZIP(), []int{18}
+	return file_service_twofactor_proto_rawDescGZIP(), []int{16}
 }
 
 type CTwoFactor_UsageEvent struct {
@@ -1423,7 +1327,7 @@ type CTwoFactor_UsageEvent struct {
 
 func (x *CTwoFactor_UsageEvent) Reset() {
 	*x = CTwoFactor_UsageEvent{}
-	mi := &file_service_twofactor_proto_msgTypes[19]
+	mi := &file_service_twofactor_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1435,7 +1339,7 @@ func (x *CTwoFactor_UsageEvent) String() string {
 func (*CTwoFactor_UsageEvent) ProtoMessage() {}
 
 func (x *CTwoFactor_UsageEvent) ProtoReflect() protoreflect.Message {
-	mi := &file_service_twofactor_proto_msgTypes[19]
+	mi := &file_service_twofactor_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1448,7 +1352,7 @@ func (x *CTwoFactor_UsageEvent) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CTwoFactor_UsageEvent.ProtoReflect.Descriptor instead.
 func (*CTwoFactor_UsageEvent) Descriptor() ([]byte, []int) {
-	return file_service_twofactor_proto_rawDescGZIP(), []int{19}
+	return file_service_twofactor_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *CTwoFactor_UsageEvent) GetTime() uint32 {
@@ -1553,13 +1457,7 @@ const file_service_twofactor_proto_rawDesc = "" +
 	"\x11replacement_token\x18\x02 \x01(\v2;.CRemoveAuthenticatorViaChallengeContinue_Replacement_TokenR\x10replacementToken\"9\n" +
 	"7CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request\"T\n" +
 	"8CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response\x12\x18\n" +
-	"\asuccess\x18\x01 \x01(\bR\asuccess\"\x8f\x01\n" +
-	"\x1cCTwoFactor_SendEmail_Request\x12\x18\n" +
-	"\asteamid\x18\x01 \x01(\x06R\asteamid\x12\x1d\n" +
-	"\n" +
-	"email_type\x18\x02 \x01(\rR\temailType\x126\n" +
-	"\x17include_activation_code\x18\x03 \x01(\bR\x15includeActivationCode\"\x1f\n" +
-	"\x1dCTwoFactor_SendEmail_Response\"Y\n" +
+	"\asuccess\x18\x01 \x01(\bR\asuccess\"Y\n" +
 	"\x19CTwoFactor_Status_Request\x12\x18\n" +
 	"\asteamid\x18\x01 \x01(\x06R\asteamid\x12\"\n" +
 	"\ainclude\x18\x02 \x01(\x05B\b\x82\xb5\x18\x04enumR\ainclude\"\xe6\x05\n" +
@@ -1605,7 +1503,7 @@ const file_service_twofactor_proto_rawDesc = "" +
 	"\n" +
 	"usage_type\x18\x02 \x01(\x05B\b\x82\xb5\x18\x04enumR\tusageType\x12+\n" +
 	"\x11confirmation_type\x18\x03 \x01(\x05R\x10confirmationType\x12/\n" +
-	"\x13confirmation_action\x18\x04 \x01(\x05R\x12confirmationAction2\xd1\a\n" +
+	"\x13confirmation_action\x18\x04 \x01(\x05R\x12confirmationAction2\x85\a\n" +
 	"\tTwoFactor\x12_\n" +
 	"\x10AddAuthenticator\x12$.CTwoFactor_AddAuthenticator_Request\x1a%.CTwoFactor_AddAuthenticator_Response\x12w\n" +
 	"\x18FinalizeAddAuthenticator\x12,.CTwoFactor_FinalizeAddAuthenticator_Request\x1a-.CTwoFactor_FinalizeAddAuthenticator_Response\x12F\n" +
@@ -1613,8 +1511,7 @@ const file_service_twofactor_proto_rawDesc = "" +
 	"\tQueryTime\x12\x18.CTwoFactor_Time_Request\x1a\x19.CTwoFactor_Time_Response\x12h\n" +
 	"\x13RemoveAuthenticator\x12'.CTwoFactor_RemoveAuthenticator_Request\x1a(.CTwoFactor_RemoveAuthenticator_Response\x12\xa4\x01\n" +
 	"'RemoveAuthenticatorViaChallengeContinue\x12;.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request\x1a<.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response\x12\x9b\x01\n" +
-	"$RemoveAuthenticatorViaChallengeStart\x128.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request\x1a9.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response\x12J\n" +
-	"\tSendEmail\x12\x1d.CTwoFactor_SendEmail_Request\x1a\x1e.CTwoFactor_SendEmail_Response\x12e\n" +
+	"$RemoveAuthenticatorViaChallengeStart\x128.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request\x1a9.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response\x12e\n" +
 	"\x12UpdateTokenVersion\x12&.CTwoFactor_UpdateTokenVersion_Request\x1a'.CTwoFactor_UpdateTokenVersion_Response"
 
 var (
@@ -1629,7 +1526,7 @@ func file_service_twofactor_proto_rawDescGZIP() []byte {
 	return file_service_twofactor_proto_rawDescData
 }
 
-var file_service_twofactor_proto_msgTypes = make([]protoimpl.MessageInfo, 20)
+var file_service_twofactor_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
 var file_service_twofactor_proto_goTypes = []any{
 	(*CRemoveAuthenticatorViaChallengeContinue_Replacement_Token)(nil),  // 0: CRemoveAuthenticatorViaChallengeContinue_Replacement_Token
 	(*CTwoFactor_AddAuthenticator_Request)(nil),                         // 1: CTwoFactor_AddAuthenticator_Request
@@ -1642,39 +1539,35 @@ var file_service_twofactor_proto_goTypes = []any{
 	(*CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response)(nil), // 8: CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response
 	(*CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request)(nil),     // 9: CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request
 	(*CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response)(nil),    // 10: CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response
-	(*CTwoFactor_SendEmail_Request)(nil),                                // 11: CTwoFactor_SendEmail_Request
-	(*CTwoFactor_SendEmail_Response)(nil),                               // 12: CTwoFactor_SendEmail_Response
-	(*CTwoFactor_Status_Request)(nil),                                   // 13: CTwoFactor_Status_Request
-	(*CTwoFactor_Status_Response)(nil),                                  // 14: CTwoFactor_Status_Response
-	(*CTwoFactor_Time_Request)(nil),                                     // 15: CTwoFactor_Time_Request
-	(*CTwoFactor_Time_Response)(nil),                                    // 16: CTwoFactor_Time_Response
-	(*CTwoFactor_UpdateTokenVersion_Request)(nil),                       // 17: CTwoFactor_UpdateTokenVersion_Request
-	(*CTwoFactor_UpdateTokenVersion_Response)(nil),                      // 18: CTwoFactor_UpdateTokenVersion_Response
-	(*CTwoFactor_UsageEvent)(nil),                                       // 19: CTwoFactor_UsageEvent
+	(*CTwoFactor_Status_Request)(nil),                                   // 11: CTwoFactor_Status_Request
+	(*CTwoFactor_Status_Response)(nil),                                  // 12: CTwoFactor_Status_Response
+	(*CTwoFactor_Time_Request)(nil),                                     // 13: CTwoFactor_Time_Request
+	(*CTwoFactor_Time_Response)(nil),                                    // 14: CTwoFactor_Time_Response
+	(*CTwoFactor_UpdateTokenVersion_Request)(nil),                       // 15: CTwoFactor_UpdateTokenVersion_Request
+	(*CTwoFactor_UpdateTokenVersion_Response)(nil),                      // 16: CTwoFactor_UpdateTokenVersion_Response
+	(*CTwoFactor_UsageEvent)(nil),                                       // 17: CTwoFactor_UsageEvent
 }
 var file_service_twofactor_proto_depIdxs = []int32{
 	0,  // 0: CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response.replacement_token:type_name -> CRemoveAuthenticatorViaChallengeContinue_Replacement_Token
-	19, // 1: CTwoFactor_Status_Response.usages:type_name -> CTwoFactor_UsageEvent
+	17, // 1: CTwoFactor_Status_Response.usages:type_name -> CTwoFactor_UsageEvent
 	1,  // 2: TwoFactor.AddAuthenticator:input_type -> CTwoFactor_AddAuthenticator_Request
 	3,  // 3: TwoFactor.FinalizeAddAuthenticator:input_type -> CTwoFactor_FinalizeAddAuthenticator_Request
-	13, // 4: TwoFactor.QueryStatus:input_type -> CTwoFactor_Status_Request
-	15, // 5: TwoFactor.QueryTime:input_type -> CTwoFactor_Time_Request
+	11, // 4: TwoFactor.QueryStatus:input_type -> CTwoFactor_Status_Request
+	13, // 5: TwoFactor.QueryTime:input_type -> CTwoFactor_Time_Request
 	5,  // 6: TwoFactor.RemoveAuthenticator:input_type -> CTwoFactor_RemoveAuthenticator_Request
 	7,  // 7: TwoFactor.RemoveAuthenticatorViaChallengeContinue:input_type -> CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request
 	9,  // 8: TwoFactor.RemoveAuthenticatorViaChallengeStart:input_type -> CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request
-	11, // 9: TwoFactor.SendEmail:input_type -> CTwoFactor_SendEmail_Request
-	17, // 10: TwoFactor.UpdateTokenVersion:input_type -> CTwoFactor_UpdateTokenVersion_Request
-	2,  // 11: TwoFactor.AddAuthenticator:output_type -> CTwoFactor_AddAuthenticator_Response
-	4,  // 12: TwoFactor.FinalizeAddAuthenticator:output_type -> CTwoFactor_FinalizeAddAuthenticator_Response
-	14, // 13: TwoFactor.QueryStatus:output_type -> CTwoFactor_Status_Response
-	16, // 14: TwoFactor.QueryTime:output_type -> CTwoFactor_Time_Response
-	6,  // 15: TwoFactor.RemoveAuthenticator:output_type -> CTwoFactor_RemoveAuthenticator_Response
-	8,  // 16: TwoFactor.RemoveAuthenticatorViaChallengeContinue:output_type -> CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response
-	10, // 17: TwoFactor.RemoveAuthenticatorViaChallengeStart:output_type -> CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response
-	12, // 18: TwoFactor.SendEmail:output_type -> CTwoFactor_SendEmail_Response
-	18, // 19: TwoFactor.UpdateTokenVersion:output_type -> CTwoFactor_UpdateTokenVersion_Response
-	11, // [11:20] is the sub-list for method output_type
-	2,  // [2:11] is the sub-list for method input_type
+	15, // 9: TwoFactor.UpdateTokenVersion:input_type -> CTwoFactor_UpdateTokenVersion_Request
+	2,  // 10: TwoFactor.AddAuthenticator:output_type -> CTwoFactor_AddAuthenticator_Response
+	4,  // 11: TwoFactor.FinalizeAddAuthenticator:output_type -> CTwoFactor_FinalizeAddAuthenticator_Response
+	12, // 12: TwoFactor.QueryStatus:output_type -> CTwoFactor_Status_Response
+	14, // 13: TwoFactor.QueryTime:output_type -> CTwoFactor_Time_Response
+	6,  // 14: TwoFactor.RemoveAuthenticator:output_type -> CTwoFactor_RemoveAuthenticator_Response
+	8,  // 15: TwoFactor.RemoveAuthenticatorViaChallengeContinue:output_type -> CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response
+	10, // 16: TwoFactor.RemoveAuthenticatorViaChallengeStart:output_type -> CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response
+	16, // 17: TwoFactor.UpdateTokenVersion:output_type -> CTwoFactor_UpdateTokenVersion_Response
+	10, // [10:18] is the sub-list for method output_type
+	2,  // [2:10] is the sub-list for method input_type
 	2,  // [2:2] is the sub-list for extension type_name
 	2,  // [2:2] is the sub-list for extension extendee
 	0,  // [0:2] is the sub-list for field type_name
@@ -1692,7 +1585,7 @@ func file_service_twofactor_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_service_twofactor_proto_rawDesc), len(file_service_twofactor_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   20,
+			NumMessages:   18,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

@@ -49034,6 +49034,165 @@ func (x *CVirtualMenuKey) GetBindingType() uint32 {
 	return 0
 }
 
+// Used by: common.proto
+type CVRGamepadUI_Frame struct {
+	state         protoimpl.MessageState        `protogen:"open.v1"`
+	FrameId       *uint32                       `protobuf:"varint,1,opt,name=frame_id,json=frameId" json:"frame_id,omitempty"`
+	Menu          *CVRGamepadUI_Frame_FrameMenu `protobuf:"bytes,2,opt,name=menu" json:"menu,omitempty"`
+	TmpTitle      *string                       `protobuf:"bytes,1000,opt,name=tmp_title,json=tmpTitle" json:"tmp_title,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CVRGamepadUI_Frame) Reset() {
+	*x = CVRGamepadUI_Frame{}
+	mi := &file_common_proto_msgTypes[657]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CVRGamepadUI_Frame) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CVRGamepadUI_Frame) ProtoMessage() {}
+
+func (x *CVRGamepadUI_Frame) ProtoReflect() protoreflect.Message {
+	mi := &file_common_proto_msgTypes[657]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CVRGamepadUI_Frame.ProtoReflect.Descriptor instead.
+func (*CVRGamepadUI_Frame) Descriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{657}
+}
+
+func (x *CVRGamepadUI_Frame) GetFrameId() uint32 {
+	if x != nil && x.FrameId != nil {
+		return *x.FrameId
+	}
+	return 0
+}
+
+func (x *CVRGamepadUI_Frame) GetMenu() *CVRGamepadUI_Frame_FrameMenu {
+	if x != nil {
+		return x.Menu
+	}
+	return nil
+}
+
+func (x *CVRGamepadUI_Frame) GetTmpTitle() string {
+	if x != nil && x.TmpTitle != nil {
+		return *x.TmpTitle
+	}
+	return ""
+}
+
+// Used by: common.proto
+type CVRGamepadUI_Frame_FrameMenu struct {
+	state         protoimpl.MessageState               `protogen:"open.v1"`
+	Items         []*CVRGamepadUI_Frame_FrameMenu_Item `protobuf:"bytes,1,rep,name=items" json:"items,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CVRGamepadUI_Frame_FrameMenu) Reset() {
+	*x = CVRGamepadUI_Frame_FrameMenu{}
+	mi := &file_common_proto_msgTypes[658]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CVRGamepadUI_Frame_FrameMenu) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CVRGamepadUI_Frame_FrameMenu) ProtoMessage() {}
+
+func (x *CVRGamepadUI_Frame_FrameMenu) ProtoReflect() protoreflect.Message {
+	mi := &file_common_proto_msgTypes[658]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CVRGamepadUI_Frame_FrameMenu.ProtoReflect.Descriptor instead.
+func (*CVRGamepadUI_Frame_FrameMenu) Descriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{658}
+}
+
+func (x *CVRGamepadUI_Frame_FrameMenu) GetItems() []*CVRGamepadUI_Frame_FrameMenu_Item {
+	if x != nil {
+		return x.Items
+	}
+	return nil
+}
+
+// Used by: common.proto
+type CVRGamepadUI_Frame_FrameMenu_Item struct {
+	state         protoimpl.MessageState   `protogen:"open.v1"`
+	TmpIcon       *CVRGamepadUIShared_Icon `protobuf:"bytes,1000,opt,name=tmp_icon,json=tmpIcon" json:"tmp_icon,omitempty"`
+	TmpLabel      *string                  `protobuf:"bytes,1001,opt,name=tmp_label,json=tmpLabel" json:"tmp_label,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CVRGamepadUI_Frame_FrameMenu_Item) Reset() {
+	*x = CVRGamepadUI_Frame_FrameMenu_Item{}
+	mi := &file_common_proto_msgTypes[659]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CVRGamepadUI_Frame_FrameMenu_Item) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CVRGamepadUI_Frame_FrameMenu_Item) ProtoMessage() {}
+
+func (x *CVRGamepadUI_Frame_FrameMenu_Item) ProtoReflect() protoreflect.Message {
+	mi := &file_common_proto_msgTypes[659]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CVRGamepadUI_Frame_FrameMenu_Item.ProtoReflect.Descriptor instead.
+func (*CVRGamepadUI_Frame_FrameMenu_Item) Descriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{659}
+}
+
+func (x *CVRGamepadUI_Frame_FrameMenu_Item) GetTmpIcon() *CVRGamepadUIShared_Icon {
+	if x != nil {
+		return x.TmpIcon
+	}
+	return nil
+}
+
+func (x *CVRGamepadUI_Frame_FrameMenu_Item) GetTmpLabel() string {
+	if x != nil && x.TmpLabel != nil {
+		return *x.TmpLabel
+	}
+	return ""
+}
+
 type CVRGamepadUI_Message_DashboardActionInvoked_Request struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	ActionId      *uint32                `protobuf:"varint,1,opt,name=action_id,json=actionId" json:"action_id,omitempty"`
@@ -49044,7 +49203,7 @@ type CVRGamepadUI_Message_DashboardActionInvoked_Request struct {
 
 func (x *CVRGamepadUI_Message_DashboardActionInvoked_Request) Reset() {
 	*x = CVRGamepadUI_Message_DashboardActionInvoked_Request{}
-	mi := &file_common_proto_msgTypes[657]
+	mi := &file_common_proto_msgTypes[660]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49056,7 +49215,7 @@ func (x *CVRGamepadUI_Message_DashboardActionInvoked_Request) String() string {
 func (*CVRGamepadUI_Message_DashboardActionInvoked_Request) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_DashboardActionInvoked_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[657]
+	mi := &file_common_proto_msgTypes[660]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49069,7 +49228,7 @@ func (x *CVRGamepadUI_Message_DashboardActionInvoked_Request) ProtoReflect() pro
 
 // Deprecated: Use CVRGamepadUI_Message_DashboardActionInvoked_Request.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_DashboardActionInvoked_Request) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{657}
+	return file_common_proto_rawDescGZIP(), []int{660}
 }
 
 func (x *CVRGamepadUI_Message_DashboardActionInvoked_Request) GetActionId() uint32 {
@@ -49094,7 +49253,7 @@ type CVRGamepadUI_Message_DashboardActionInvoked_Response struct {
 
 func (x *CVRGamepadUI_Message_DashboardActionInvoked_Response) Reset() {
 	*x = CVRGamepadUI_Message_DashboardActionInvoked_Response{}
-	mi := &file_common_proto_msgTypes[658]
+	mi := &file_common_proto_msgTypes[661]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49106,7 +49265,7 @@ func (x *CVRGamepadUI_Message_DashboardActionInvoked_Response) String() string {
 func (*CVRGamepadUI_Message_DashboardActionInvoked_Response) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_DashboardActionInvoked_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[658]
+	mi := &file_common_proto_msgTypes[661]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49119,7 +49278,7 @@ func (x *CVRGamepadUI_Message_DashboardActionInvoked_Response) ProtoReflect() pr
 
 // Deprecated: Use CVRGamepadUI_Message_DashboardActionInvoked_Response.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_DashboardActionInvoked_Response) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{658}
+	return file_common_proto_rawDescGZIP(), []int{661}
 }
 
 type CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request struct {
@@ -49131,7 +49290,7 @@ type CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request struct {
 
 func (x *CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request) Reset() {
 	*x = CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request{}
-	mi := &file_common_proto_msgTypes[659]
+	mi := &file_common_proto_msgTypes[662]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49143,7 +49302,7 @@ func (x *CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request) String() st
 func (*CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[659]
+	mi := &file_common_proto_msgTypes[662]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49156,7 +49315,7 @@ func (x *CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request) ProtoReflec
 
 // Deprecated: Use CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{659}
+	return file_common_proto_rawDescGZIP(), []int{662}
 }
 
 func (x *CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request) GetWindowId() uint32 {
@@ -49174,7 +49333,7 @@ type CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response struct {
 
 func (x *CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response) Reset() {
 	*x = CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response{}
-	mi := &file_common_proto_msgTypes[660]
+	mi := &file_common_proto_msgTypes[663]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49186,7 +49345,7 @@ func (x *CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response) String() s
 func (*CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[660]
+	mi := &file_common_proto_msgTypes[663]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49199,7 +49358,7 @@ func (x *CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response) ProtoRefle
 
 // Deprecated: Use CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{660}
+	return file_common_proto_rawDescGZIP(), []int{663}
 }
 
 type CVRGamepadUI_Message_DashboardTabClicked_Request struct {
@@ -49211,7 +49370,7 @@ type CVRGamepadUI_Message_DashboardTabClicked_Request struct {
 
 func (x *CVRGamepadUI_Message_DashboardTabClicked_Request) Reset() {
 	*x = CVRGamepadUI_Message_DashboardTabClicked_Request{}
-	mi := &file_common_proto_msgTypes[661]
+	mi := &file_common_proto_msgTypes[664]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49223,7 +49382,7 @@ func (x *CVRGamepadUI_Message_DashboardTabClicked_Request) String() string {
 func (*CVRGamepadUI_Message_DashboardTabClicked_Request) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_DashboardTabClicked_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[661]
+	mi := &file_common_proto_msgTypes[664]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49236,7 +49395,7 @@ func (x *CVRGamepadUI_Message_DashboardTabClicked_Request) ProtoReflect() protor
 
 // Deprecated: Use CVRGamepadUI_Message_DashboardTabClicked_Request.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_DashboardTabClicked_Request) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{661}
+	return file_common_proto_rawDescGZIP(), []int{664}
 }
 
 func (x *CVRGamepadUI_Message_DashboardTabClicked_Request) GetTabId() uint32 {
@@ -49254,7 +49413,7 @@ type CVRGamepadUI_Message_DashboardTabClicked_Response struct {
 
 func (x *CVRGamepadUI_Message_DashboardTabClicked_Response) Reset() {
 	*x = CVRGamepadUI_Message_DashboardTabClicked_Response{}
-	mi := &file_common_proto_msgTypes[662]
+	mi := &file_common_proto_msgTypes[665]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49266,7 +49425,7 @@ func (x *CVRGamepadUI_Message_DashboardTabClicked_Response) String() string {
 func (*CVRGamepadUI_Message_DashboardTabClicked_Response) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_DashboardTabClicked_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[662]
+	mi := &file_common_proto_msgTypes[665]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49279,7 +49438,7 @@ func (x *CVRGamepadUI_Message_DashboardTabClicked_Response) ProtoReflect() proto
 
 // Deprecated: Use CVRGamepadUI_Message_DashboardTabClicked_Response.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_DashboardTabClicked_Response) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{662}
+	return file_common_proto_rawDescGZIP(), []int{665}
 }
 
 type CVRGamepadUI_Message_Error_Response struct {
@@ -49293,7 +49452,7 @@ type CVRGamepadUI_Message_Error_Response struct {
 
 func (x *CVRGamepadUI_Message_Error_Response) Reset() {
 	*x = CVRGamepadUI_Message_Error_Response{}
-	mi := &file_common_proto_msgTypes[663]
+	mi := &file_common_proto_msgTypes[666]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49305,7 +49464,7 @@ func (x *CVRGamepadUI_Message_Error_Response) String() string {
 func (*CVRGamepadUI_Message_Error_Response) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_Error_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[663]
+	mi := &file_common_proto_msgTypes[666]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49318,7 +49477,7 @@ func (x *CVRGamepadUI_Message_Error_Response) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use CVRGamepadUI_Message_Error_Response.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_Error_Response) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{663}
+	return file_common_proto_rawDescGZIP(), []int{666}
 }
 
 func (x *CVRGamepadUI_Message_Error_Response) GetError() int32 {
@@ -49351,7 +49510,7 @@ type CVRGamepadUI_Message_ExecuteSteamURL_Request struct {
 
 func (x *CVRGamepadUI_Message_ExecuteSteamURL_Request) Reset() {
 	*x = CVRGamepadUI_Message_ExecuteSteamURL_Request{}
-	mi := &file_common_proto_msgTypes[664]
+	mi := &file_common_proto_msgTypes[667]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49363,7 +49522,7 @@ func (x *CVRGamepadUI_Message_ExecuteSteamURL_Request) String() string {
 func (*CVRGamepadUI_Message_ExecuteSteamURL_Request) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ExecuteSteamURL_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[664]
+	mi := &file_common_proto_msgTypes[667]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49376,7 +49535,7 @@ func (x *CVRGamepadUI_Message_ExecuteSteamURL_Request) ProtoReflect() protorefle
 
 // Deprecated: Use CVRGamepadUI_Message_ExecuteSteamURL_Request.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ExecuteSteamURL_Request) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{664}
+	return file_common_proto_rawDescGZIP(), []int{667}
 }
 
 func (x *CVRGamepadUI_Message_ExecuteSteamURL_Request) GetUrl() string {
@@ -49394,7 +49553,7 @@ type CVRGamepadUI_Message_ExecuteSteamURL_Response struct {
 
 func (x *CVRGamepadUI_Message_ExecuteSteamURL_Response) Reset() {
 	*x = CVRGamepadUI_Message_ExecuteSteamURL_Response{}
-	mi := &file_common_proto_msgTypes[665]
+	mi := &file_common_proto_msgTypes[668]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49406,7 +49565,7 @@ func (x *CVRGamepadUI_Message_ExecuteSteamURL_Response) String() string {
 func (*CVRGamepadUI_Message_ExecuteSteamURL_Response) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ExecuteSteamURL_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[665]
+	mi := &file_common_proto_msgTypes[668]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49419,7 +49578,7 @@ func (x *CVRGamepadUI_Message_ExecuteSteamURL_Response) ProtoReflect() protorefl
 
 // Deprecated: Use CVRGamepadUI_Message_ExecuteSteamURL_Response.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ExecuteSteamURL_Response) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{665}
+	return file_common_proto_rawDescGZIP(), []int{668}
 }
 
 type CVRGamepadUI_Message_Header struct {
@@ -49434,7 +49593,7 @@ type CVRGamepadUI_Message_Header struct {
 
 func (x *CVRGamepadUI_Message_Header) Reset() {
 	*x = CVRGamepadUI_Message_Header{}
-	mi := &file_common_proto_msgTypes[666]
+	mi := &file_common_proto_msgTypes[669]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49446,7 +49605,7 @@ func (x *CVRGamepadUI_Message_Header) String() string {
 func (*CVRGamepadUI_Message_Header) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_Header) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[666]
+	mi := &file_common_proto_msgTypes[669]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49459,7 +49618,7 @@ func (x *CVRGamepadUI_Message_Header) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CVRGamepadUI_Message_Header.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_Header) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{666}
+	return file_common_proto_rawDescGZIP(), []int{669}
 }
 
 func (x *CVRGamepadUI_Message_Header) GetName() string {
@@ -49491,15 +49650,15 @@ func (x *CVRGamepadUI_Message_Header) GetIsErrorResponse() bool {
 }
 
 type CVRGamepadUI_Message_HideDashboardPopup_Request struct {
-	state                   protoimpl.MessageState `protogen:"open.v1"`
-	DashboardPopupRequestId *uint32                `protobuf:"varint,1,opt,name=dashboard_popup_request_id,json=dashboardPopupRequestId" json:"dashboard_popup_request_id,omitempty"`
-	unknownFields           protoimpl.UnknownFields
-	sizeCache               protoimpl.SizeCache
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	DashboardPopupId *uint32                `protobuf:"varint,1,opt,name=dashboard_popup_id,json=dashboardPopupId" json:"dashboard_popup_id,omitempty"` //optional uint32 dashboard_popup_request_id = 1;
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 }
 
 func (x *CVRGamepadUI_Message_HideDashboardPopup_Request) Reset() {
 	*x = CVRGamepadUI_Message_HideDashboardPopup_Request{}
-	mi := &file_common_proto_msgTypes[667]
+	mi := &file_common_proto_msgTypes[670]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49511,7 +49670,7 @@ func (x *CVRGamepadUI_Message_HideDashboardPopup_Request) String() string {
 func (*CVRGamepadUI_Message_HideDashboardPopup_Request) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_HideDashboardPopup_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[667]
+	mi := &file_common_proto_msgTypes[670]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49524,12 +49683,12 @@ func (x *CVRGamepadUI_Message_HideDashboardPopup_Request) ProtoReflect() protore
 
 // Deprecated: Use CVRGamepadUI_Message_HideDashboardPopup_Request.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_HideDashboardPopup_Request) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{667}
+	return file_common_proto_rawDescGZIP(), []int{670}
 }
 
-func (x *CVRGamepadUI_Message_HideDashboardPopup_Request) GetDashboardPopupRequestId() uint32 {
-	if x != nil && x.DashboardPopupRequestId != nil {
-		return *x.DashboardPopupRequestId
+func (x *CVRGamepadUI_Message_HideDashboardPopup_Request) GetDashboardPopupId() uint32 {
+	if x != nil && x.DashboardPopupId != nil {
+		return *x.DashboardPopupId
 	}
 	return 0
 }
@@ -49542,7 +49701,7 @@ type CVRGamepadUI_Message_HideDashboardPopup_Response struct {
 
 func (x *CVRGamepadUI_Message_HideDashboardPopup_Response) Reset() {
 	*x = CVRGamepadUI_Message_HideDashboardPopup_Response{}
-	mi := &file_common_proto_msgTypes[668]
+	mi := &file_common_proto_msgTypes[671]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49554,7 +49713,7 @@ func (x *CVRGamepadUI_Message_HideDashboardPopup_Response) String() string {
 func (*CVRGamepadUI_Message_HideDashboardPopup_Response) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_HideDashboardPopup_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[668]
+	mi := &file_common_proto_msgTypes[671]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49567,7 +49726,79 @@ func (x *CVRGamepadUI_Message_HideDashboardPopup_Response) ProtoReflect() protor
 
 // Deprecated: Use CVRGamepadUI_Message_HideDashboardPopup_Response.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_HideDashboardPopup_Response) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{668}
+	return file_common_proto_rawDescGZIP(), []int{671}
+}
+
+type CVRGamepadUI_Message_InitFrameSystem_Request struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CVRGamepadUI_Message_InitFrameSystem_Request) Reset() {
+	*x = CVRGamepadUI_Message_InitFrameSystem_Request{}
+	mi := &file_common_proto_msgTypes[672]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CVRGamepadUI_Message_InitFrameSystem_Request) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CVRGamepadUI_Message_InitFrameSystem_Request) ProtoMessage() {}
+
+func (x *CVRGamepadUI_Message_InitFrameSystem_Request) ProtoReflect() protoreflect.Message {
+	mi := &file_common_proto_msgTypes[672]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CVRGamepadUI_Message_InitFrameSystem_Request.ProtoReflect.Descriptor instead.
+func (*CVRGamepadUI_Message_InitFrameSystem_Request) Descriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{672}
+}
+
+type CVRGamepadUI_Message_InitFrameSystem_Response struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CVRGamepadUI_Message_InitFrameSystem_Response) Reset() {
+	*x = CVRGamepadUI_Message_InitFrameSystem_Response{}
+	mi := &file_common_proto_msgTypes[673]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CVRGamepadUI_Message_InitFrameSystem_Response) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CVRGamepadUI_Message_InitFrameSystem_Response) ProtoMessage() {}
+
+func (x *CVRGamepadUI_Message_InitFrameSystem_Response) ProtoReflect() protoreflect.Message {
+	mi := &file_common_proto_msgTypes[673]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CVRGamepadUI_Message_InitFrameSystem_Response.ProtoReflect.Descriptor instead.
+func (*CVRGamepadUI_Message_InitFrameSystem_Response) Descriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{673}
 }
 
 type CVRGamepadUI_Message_RemoteVideoStream_Request struct {
@@ -49580,7 +49811,7 @@ type CVRGamepadUI_Message_RemoteVideoStream_Request struct {
 
 func (x *CVRGamepadUI_Message_RemoteVideoStream_Request) Reset() {
 	*x = CVRGamepadUI_Message_RemoteVideoStream_Request{}
-	mi := &file_common_proto_msgTypes[669]
+	mi := &file_common_proto_msgTypes[674]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49592,7 +49823,7 @@ func (x *CVRGamepadUI_Message_RemoteVideoStream_Request) String() string {
 func (*CVRGamepadUI_Message_RemoteVideoStream_Request) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_RemoteVideoStream_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[669]
+	mi := &file_common_proto_msgTypes[674]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49605,7 +49836,7 @@ func (x *CVRGamepadUI_Message_RemoteVideoStream_Request) ProtoReflect() protoref
 
 // Deprecated: Use CVRGamepadUI_Message_RemoteVideoStream_Request.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_RemoteVideoStream_Request) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{669}
+	return file_common_proto_rawDescGZIP(), []int{674}
 }
 
 func (x *CVRGamepadUI_Message_RemoteVideoStream_Request) GetSourceAccountid() uint32 {
@@ -49630,7 +49861,7 @@ type CVRGamepadUI_Message_RemoteVideoStream_Response struct {
 
 func (x *CVRGamepadUI_Message_RemoteVideoStream_Response) Reset() {
 	*x = CVRGamepadUI_Message_RemoteVideoStream_Response{}
-	mi := &file_common_proto_msgTypes[670]
+	mi := &file_common_proto_msgTypes[675]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49642,7 +49873,7 @@ func (x *CVRGamepadUI_Message_RemoteVideoStream_Response) String() string {
 func (*CVRGamepadUI_Message_RemoteVideoStream_Response) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_RemoteVideoStream_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[670]
+	mi := &file_common_proto_msgTypes[675]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49655,33 +49886,34 @@ func (x *CVRGamepadUI_Message_RemoteVideoStream_Response) ProtoReflect() protore
 
 // Deprecated: Use CVRGamepadUI_Message_RemoteVideoStream_Response.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_RemoteVideoStream_Response) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{670}
+	return file_common_proto_rawDescGZIP(), []int{675}
 }
 
 type CVRGamepadUI_Message_ShowDashboardPopup_Request struct {
-	state                   protoimpl.MessageState                                              `protogen:"open.v1"`
-	DashboardPopupRequestId *uint32                                                             `protobuf:"varint,1,opt,name=dashboard_popup_request_id,json=dashboardPopupRequestId" json:"dashboard_popup_request_id,omitempty"`
-	PopupOverlayKey         *string                                                             `protobuf:"bytes,2,opt,name=popup_overlay_key,json=popupOverlayKey" json:"popup_overlay_key,omitempty"`
-	ParentOverlayKey        *string                                                             `protobuf:"bytes,3,opt,name=parent_overlay_key,json=parentOverlayKey" json:"parent_overlay_key,omitempty"`
-	OriginOnParent          *CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition `protobuf:"bytes,4,opt,name=origin_on_parent,json=originOnParent" json:"origin_on_parent,omitempty"`
-	OriginOnPopup           *CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition `protobuf:"bytes,5,opt,name=origin_on_popup,json=originOnPopup" json:"origin_on_popup,omitempty"`
-	Offset                  *CVRGamepadUI_Message_ShowDashboardPopup_Request_Position           `protobuf:"bytes,6,opt,name=offset" json:"offset,omitempty"`
-	Rotation                *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation           `protobuf:"bytes,7,opt,name=rotation" json:"rotation,omitempty"`
-	InheritParentPitch      *bool                                                               `protobuf:"varint,8,opt,name=inherit_parent_pitch,json=inheritParentPitch" json:"inherit_parent_pitch,omitempty"`
-	InheritParentCurvature  *bool                                                               `protobuf:"varint,9,opt,name=inherit_parent_curvature,json=inheritParentCurvature" json:"inherit_parent_curvature,omitempty"`
-	ClipRect                *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect               `protobuf:"bytes,10,opt,name=clip_rect,json=clipRect" json:"clip_rect,omitempty"`
-	Interactive             *bool                                                               `protobuf:"varint,11,opt,name=interactive" json:"interactive,omitempty"`
-	RequiresLaser           *bool                                                               `protobuf:"varint,12,opt,name=requires_laser,json=requiresLaser" json:"requires_laser,omitempty"`
-	ParentDevicePath        *string                                                             `protobuf:"bytes,13,opt,name=parent_device_path,json=parentDevicePath" json:"parent_device_path,omitempty"`
-	SortOrder               *int32                                                              `protobuf:"varint,14,opt,name=sort_order,json=sortOrder" json:"sort_order,omitempty"`
-	ParentEnum              *int32                                                              `protobuf:"varint,15,opt,name=parent_enum,json=parentEnum" json:"parent_enum,omitempty"`
-	unknownFields           protoimpl.UnknownFields
-	sizeCache               protoimpl.SizeCache
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	DashboardPopupId *uint32                `protobuf:"varint,1,opt,name=dashboard_popup_id,json=dashboardPopupId" json:"dashboard_popup_id,omitempty"`
+	// optional uint32 dashboard_popup_request_id = 1;
+	PopupOverlayKey        *string                                                             `protobuf:"bytes,2,opt,name=popup_overlay_key,json=popupOverlayKey" json:"popup_overlay_key,omitempty"`
+	ParentOverlayKey       *string                                                             `protobuf:"bytes,3,opt,name=parent_overlay_key,json=parentOverlayKey" json:"parent_overlay_key,omitempty"`
+	OriginOnParent         *CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition `protobuf:"bytes,4,opt,name=origin_on_parent,json=originOnParent" json:"origin_on_parent,omitempty"`
+	OriginOnPopup          *CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition `protobuf:"bytes,5,opt,name=origin_on_popup,json=originOnPopup" json:"origin_on_popup,omitempty"`
+	Offset                 *CVRGamepadUI_Message_ShowDashboardPopup_Request_Position           `protobuf:"bytes,6,opt,name=offset" json:"offset,omitempty"`
+	Rotation               *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation           `protobuf:"bytes,7,opt,name=rotation" json:"rotation,omitempty"`
+	InheritParentPitch     *bool                                                               `protobuf:"varint,8,opt,name=inherit_parent_pitch,json=inheritParentPitch" json:"inherit_parent_pitch,omitempty"`
+	InheritParentCurvature *bool                                                               `protobuf:"varint,9,opt,name=inherit_parent_curvature,json=inheritParentCurvature" json:"inherit_parent_curvature,omitempty"`
+	ClipRect               *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect               `protobuf:"bytes,10,opt,name=clip_rect,json=clipRect" json:"clip_rect,omitempty"`
+	Interactive            *bool                                                               `protobuf:"varint,11,opt,name=interactive" json:"interactive,omitempty"`
+	RequiresLaser          *bool                                                               `protobuf:"varint,12,opt,name=requires_laser,json=requiresLaser" json:"requires_laser,omitempty"`
+	ParentDevicePath       *string                                                             `protobuf:"bytes,13,opt,name=parent_device_path,json=parentDevicePath" json:"parent_device_path,omitempty"`
+	SortOrder              *int32                                                              `protobuf:"varint,14,opt,name=sort_order,json=sortOrder" json:"sort_order,omitempty"`
+	ParentEnum             *int32                                                              `protobuf:"varint,15,opt,name=parent_enum,json=parentEnum" json:"parent_enum,omitempty"`
+	unknownFields          protoimpl.UnknownFields
+	sizeCache              protoimpl.SizeCache
 }
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request) Reset() {
 	*x = CVRGamepadUI_Message_ShowDashboardPopup_Request{}
-	mi := &file_common_proto_msgTypes[671]
+	mi := &file_common_proto_msgTypes[676]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49693,7 +49925,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request) String() string {
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Request) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[671]
+	mi := &file_common_proto_msgTypes[676]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49706,12 +49938,12 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request) ProtoReflect() protore
 
 // Deprecated: Use CVRGamepadUI_Message_ShowDashboardPopup_Request.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Request) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{671}
+	return file_common_proto_rawDescGZIP(), []int{676}
 }
 
-func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request) GetDashboardPopupRequestId() uint32 {
-	if x != nil && x.DashboardPopupRequestId != nil {
-		return *x.DashboardPopupRequestId
+func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request) GetDashboardPopupId() uint32 {
+	if x != nil && x.DashboardPopupId != nil {
+		return *x.DashboardPopupId
 	}
 	return 0
 }
@@ -49825,7 +50057,7 @@ type CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition struct {
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition) Reset() {
 	*x = CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition{}
-	mi := &file_common_proto_msgTypes[672]
+	mi := &file_common_proto_msgTypes[677]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49837,7 +50069,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition) Str
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[672]
+	mi := &file_common_proto_msgTypes[677]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49850,7 +50082,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition) Pro
 
 // Deprecated: Use CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{672}
+	return file_common_proto_rawDescGZIP(), []int{677}
 }
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition) GetX() float32 {
@@ -49882,7 +50114,7 @@ type CVRGamepadUI_Message_ShowDashboardPopup_Request_Position struct {
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Position) Reset() {
 	*x = CVRGamepadUI_Message_ShowDashboardPopup_Request_Position{}
-	mi := &file_common_proto_msgTypes[673]
+	mi := &file_common_proto_msgTypes[678]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49894,7 +50126,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Position) String() stri
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Request_Position) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Position) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[673]
+	mi := &file_common_proto_msgTypes[678]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49907,7 +50139,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Position) ProtoReflect(
 
 // Deprecated: Use CVRGamepadUI_Message_ShowDashboardPopup_Request_Position.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Request_Position) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{673}
+	return file_common_proto_rawDescGZIP(), []int{678}
 }
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Position) GetXPixels() float32 {
@@ -49965,7 +50197,7 @@ type CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect struct {
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect) Reset() {
 	*x = CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect{}
-	mi := &file_common_proto_msgTypes[674]
+	mi := &file_common_proto_msgTypes[679]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49977,7 +50209,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect) String() string {
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[674]
+	mi := &file_common_proto_msgTypes[679]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -49990,7 +50222,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect) ProtoReflect() pr
 
 // Deprecated: Use CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{674}
+	return file_common_proto_rawDescGZIP(), []int{679}
 }
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect) GetUMin() float32 {
@@ -50032,7 +50264,7 @@ type CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation struct {
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation) Reset() {
 	*x = CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation{}
-	mi := &file_common_proto_msgTypes[675]
+	mi := &file_common_proto_msgTypes[680]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50044,7 +50276,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation) String() stri
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[675]
+	mi := &file_common_proto_msgTypes[680]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50057,7 +50289,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation) ProtoReflect(
 
 // Deprecated: Use CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{675}
+	return file_common_proto_rawDescGZIP(), []int{680}
 }
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation) GetPitchDegrees() float32 {
@@ -50082,7 +50314,7 @@ type CVRGamepadUI_Message_ShowDashboardPopup_Response struct {
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Response) Reset() {
 	*x = CVRGamepadUI_Message_ShowDashboardPopup_Response{}
-	mi := &file_common_proto_msgTypes[676]
+	mi := &file_common_proto_msgTypes[681]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50094,7 +50326,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Response) String() string {
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Response) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ShowDashboardPopup_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[676]
+	mi := &file_common_proto_msgTypes[681]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50107,7 +50339,7 @@ func (x *CVRGamepadUI_Message_ShowDashboardPopup_Response) ProtoReflect() protor
 
 // Deprecated: Use CVRGamepadUI_Message_ShowDashboardPopup_Response.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ShowDashboardPopup_Response) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{676}
+	return file_common_proto_rawDescGZIP(), []int{681}
 }
 
 type CVRGamepadUI_Message_ShowGame_Request struct {
@@ -50119,7 +50351,7 @@ type CVRGamepadUI_Message_ShowGame_Request struct {
 
 func (x *CVRGamepadUI_Message_ShowGame_Request) Reset() {
 	*x = CVRGamepadUI_Message_ShowGame_Request{}
-	mi := &file_common_proto_msgTypes[677]
+	mi := &file_common_proto_msgTypes[682]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50131,7 +50363,7 @@ func (x *CVRGamepadUI_Message_ShowGame_Request) String() string {
 func (*CVRGamepadUI_Message_ShowGame_Request) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ShowGame_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[677]
+	mi := &file_common_proto_msgTypes[682]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50144,7 +50376,7 @@ func (x *CVRGamepadUI_Message_ShowGame_Request) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use CVRGamepadUI_Message_ShowGame_Request.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ShowGame_Request) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{677}
+	return file_common_proto_rawDescGZIP(), []int{682}
 }
 
 func (x *CVRGamepadUI_Message_ShowGame_Request) GetOverlayKey() string {
@@ -50162,7 +50394,7 @@ type CVRGamepadUI_Message_ShowGame_Response struct {
 
 func (x *CVRGamepadUI_Message_ShowGame_Response) Reset() {
 	*x = CVRGamepadUI_Message_ShowGame_Response{}
-	mi := &file_common_proto_msgTypes[678]
+	mi := &file_common_proto_msgTypes[683]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50174,7 +50406,7 @@ func (x *CVRGamepadUI_Message_ShowGame_Response) String() string {
 func (*CVRGamepadUI_Message_ShowGame_Response) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ShowGame_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[678]
+	mi := &file_common_proto_msgTypes[683]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50187,7 +50419,7 @@ func (x *CVRGamepadUI_Message_ShowGame_Response) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use CVRGamepadUI_Message_ShowGame_Response.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ShowGame_Response) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{678}
+	return file_common_proto_rawDescGZIP(), []int{683}
 }
 
 type CVRGamepadUI_Message_ShowOverlay_Request struct {
@@ -50199,7 +50431,7 @@ type CVRGamepadUI_Message_ShowOverlay_Request struct {
 
 func (x *CVRGamepadUI_Message_ShowOverlay_Request) Reset() {
 	*x = CVRGamepadUI_Message_ShowOverlay_Request{}
-	mi := &file_common_proto_msgTypes[679]
+	mi := &file_common_proto_msgTypes[684]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50211,7 +50443,7 @@ func (x *CVRGamepadUI_Message_ShowOverlay_Request) String() string {
 func (*CVRGamepadUI_Message_ShowOverlay_Request) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ShowOverlay_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[679]
+	mi := &file_common_proto_msgTypes[684]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50224,7 +50456,7 @@ func (x *CVRGamepadUI_Message_ShowOverlay_Request) ProtoReflect() protoreflect.M
 
 // Deprecated: Use CVRGamepadUI_Message_ShowOverlay_Request.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ShowOverlay_Request) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{679}
+	return file_common_proto_rawDescGZIP(), []int{684}
 }
 
 func (x *CVRGamepadUI_Message_ShowOverlay_Request) GetOverlayKey() string {
@@ -50242,7 +50474,7 @@ type CVRGamepadUI_Message_ShowOverlay_Response struct {
 
 func (x *CVRGamepadUI_Message_ShowOverlay_Response) Reset() {
 	*x = CVRGamepadUI_Message_ShowOverlay_Response{}
-	mi := &file_common_proto_msgTypes[680]
+	mi := &file_common_proto_msgTypes[685]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50254,7 +50486,7 @@ func (x *CVRGamepadUI_Message_ShowOverlay_Response) String() string {
 func (*CVRGamepadUI_Message_ShowOverlay_Response) ProtoMessage() {}
 
 func (x *CVRGamepadUI_Message_ShowOverlay_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[680]
+	mi := &file_common_proto_msgTypes[685]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50267,7 +50499,156 @@ func (x *CVRGamepadUI_Message_ShowOverlay_Response) ProtoReflect() protoreflect.
 
 // Deprecated: Use CVRGamepadUI_Message_ShowOverlay_Response.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUI_Message_ShowOverlay_Response) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{680}
+	return file_common_proto_rawDescGZIP(), []int{685}
+}
+
+type CVRGamepadUI_Message_UpdateFrameUIs_Request struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UpdatedFrames []*CVRGamepadUI_Frame  `protobuf:"bytes,1,rep,name=updated_frames,json=updatedFrames" json:"updated_frames,omitempty"`
+	DeletedFrames []uint32               `protobuf:"varint,2,rep,name=deleted_frames,json=deletedFrames" json:"deleted_frames,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Request) Reset() {
+	*x = CVRGamepadUI_Message_UpdateFrameUIs_Request{}
+	mi := &file_common_proto_msgTypes[686]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Request) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CVRGamepadUI_Message_UpdateFrameUIs_Request) ProtoMessage() {}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Request) ProtoReflect() protoreflect.Message {
+	mi := &file_common_proto_msgTypes[686]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CVRGamepadUI_Message_UpdateFrameUIs_Request.ProtoReflect.Descriptor instead.
+func (*CVRGamepadUI_Message_UpdateFrameUIs_Request) Descriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{686}
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Request) GetUpdatedFrames() []*CVRGamepadUI_Frame {
+	if x != nil {
+		return x.UpdatedFrames
+	}
+	return nil
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Request) GetDeletedFrames() []uint32 {
+	if x != nil {
+		return x.DeletedFrames
+	}
+	return nil
+}
+
+type CVRGamepadUI_Message_UpdateFrameUIs_Response struct {
+	state         protoimpl.MessageState                                            `protogen:"open.v1"`
+	Results       []*CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult `protobuf:"bytes,1,rep,name=results" json:"results,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Response) Reset() {
+	*x = CVRGamepadUI_Message_UpdateFrameUIs_Response{}
+	mi := &file_common_proto_msgTypes[687]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Response) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CVRGamepadUI_Message_UpdateFrameUIs_Response) ProtoMessage() {}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Response) ProtoReflect() protoreflect.Message {
+	mi := &file_common_proto_msgTypes[687]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CVRGamepadUI_Message_UpdateFrameUIs_Response.ProtoReflect.Descriptor instead.
+func (*CVRGamepadUI_Message_UpdateFrameUIs_Response) Descriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{687}
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Response) GetResults() []*CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult {
+	if x != nil {
+		return x.Results
+	}
+	return nil
+}
+
+// Used by: common.proto
+type CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult struct {
+	state                     protoimpl.MessageState `protogen:"open.v1"`
+	FrameId                   *uint32                `protobuf:"varint,1,opt,name=frame_id,json=frameId" json:"frame_id,omitempty"`
+	FrameMenuDashboardPopupId *uint32                `protobuf:"varint,2,opt,name=frame_menu_dashboard_popup_id,json=frameMenuDashboardPopupId" json:"frame_menu_dashboard_popup_id,omitempty"`
+	unknownFields             protoimpl.UnknownFields
+	sizeCache                 protoimpl.SizeCache
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult) Reset() {
+	*x = CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult{}
+	mi := &file_common_proto_msgTypes[688]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult) ProtoMessage() {}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult) ProtoReflect() protoreflect.Message {
+	mi := &file_common_proto_msgTypes[688]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult.ProtoReflect.Descriptor instead.
+func (*CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult) Descriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{688}
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult) GetFrameId() uint32 {
+	if x != nil && x.FrameId != nil {
+		return *x.FrameId
+	}
+	return 0
+}
+
+func (x *CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult) GetFrameMenuDashboardPopupId() uint32 {
+	if x != nil && x.FrameMenuDashboardPopupId != nil {
+		return *x.FrameMenuDashboardPopupId
+	}
+	return 0
 }
 
 // Used by: common.proto
@@ -50296,7 +50677,7 @@ const (
 
 func (x *CVRGamepadUIShared_DashboardAction) Reset() {
 	*x = CVRGamepadUIShared_DashboardAction{}
-	mi := &file_common_proto_msgTypes[681]
+	mi := &file_common_proto_msgTypes[689]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50308,7 +50689,7 @@ func (x *CVRGamepadUIShared_DashboardAction) String() string {
 func (*CVRGamepadUIShared_DashboardAction) ProtoMessage() {}
 
 func (x *CVRGamepadUIShared_DashboardAction) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[681]
+	mi := &file_common_proto_msgTypes[689]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50321,7 +50702,7 @@ func (x *CVRGamepadUIShared_DashboardAction) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use CVRGamepadUIShared_DashboardAction.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUIShared_DashboardAction) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{681}
+	return file_common_proto_rawDescGZIP(), []int{689}
 }
 
 func (x *CVRGamepadUIShared_DashboardAction) GetActionId() uint32 {
@@ -50418,7 +50799,7 @@ type CVRGamepadUIShared_DashboardActionIcon struct {
 
 func (x *CVRGamepadUIShared_DashboardActionIcon) Reset() {
 	*x = CVRGamepadUIShared_DashboardActionIcon{}
-	mi := &file_common_proto_msgTypes[682]
+	mi := &file_common_proto_msgTypes[690]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50430,7 +50811,7 @@ func (x *CVRGamepadUIShared_DashboardActionIcon) String() string {
 func (*CVRGamepadUIShared_DashboardActionIcon) ProtoMessage() {}
 
 func (x *CVRGamepadUIShared_DashboardActionIcon) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[682]
+	mi := &file_common_proto_msgTypes[690]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50443,7 +50824,7 @@ func (x *CVRGamepadUIShared_DashboardActionIcon) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use CVRGamepadUIShared_DashboardActionIcon.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUIShared_DashboardActionIcon) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{682}
+	return file_common_proto_rawDescGZIP(), []int{690}
 }
 
 func (x *CVRGamepadUIShared_DashboardActionIcon) GetEnum() int32 {
@@ -50466,7 +50847,7 @@ type CVRGamepadUIShared_DashboardTabIcon struct {
 
 func (x *CVRGamepadUIShared_DashboardTabIcon) Reset() {
 	*x = CVRGamepadUIShared_DashboardTabIcon{}
-	mi := &file_common_proto_msgTypes[683]
+	mi := &file_common_proto_msgTypes[691]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50478,7 +50859,7 @@ func (x *CVRGamepadUIShared_DashboardTabIcon) String() string {
 func (*CVRGamepadUIShared_DashboardTabIcon) ProtoMessage() {}
 
 func (x *CVRGamepadUIShared_DashboardTabIcon) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[683]
+	mi := &file_common_proto_msgTypes[691]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50491,7 +50872,7 @@ func (x *CVRGamepadUIShared_DashboardTabIcon) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use CVRGamepadUIShared_DashboardTabIcon.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUIShared_DashboardTabIcon) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{683}
+	return file_common_proto_rawDescGZIP(), []int{691}
 }
 
 func (x *CVRGamepadUIShared_DashboardTabIcon) GetEnum() int32 {
@@ -50522,6 +50903,75 @@ func (x *CVRGamepadUIShared_DashboardTabIcon) GetHwnd() uint32 {
 	return 0
 }
 
+// Used by: common.proto
+type CVRGamepadUIShared_Icon struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Enum          *int32                 `protobuf:"varint,1,opt,name=enum" json:"enum,omitempty"`
+	Appid         *uint32                `protobuf:"varint,2,opt,name=appid" json:"appid,omitempty"`
+	Overlay       *string                `protobuf:"bytes,3,opt,name=overlay" json:"overlay,omitempty"`
+	Hwnd          *uint32                `protobuf:"varint,4,opt,name=hwnd" json:"hwnd,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CVRGamepadUIShared_Icon) Reset() {
+	*x = CVRGamepadUIShared_Icon{}
+	mi := &file_common_proto_msgTypes[692]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CVRGamepadUIShared_Icon) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CVRGamepadUIShared_Icon) ProtoMessage() {}
+
+func (x *CVRGamepadUIShared_Icon) ProtoReflect() protoreflect.Message {
+	mi := &file_common_proto_msgTypes[692]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CVRGamepadUIShared_Icon.ProtoReflect.Descriptor instead.
+func (*CVRGamepadUIShared_Icon) Descriptor() ([]byte, []int) {
+	return file_common_proto_rawDescGZIP(), []int{692}
+}
+
+func (x *CVRGamepadUIShared_Icon) GetEnum() int32 {
+	if x != nil && x.Enum != nil {
+		return *x.Enum
+	}
+	return 0
+}
+
+func (x *CVRGamepadUIShared_Icon) GetAppid() uint32 {
+	if x != nil && x.Appid != nil {
+		return *x.Appid
+	}
+	return 0
+}
+
+func (x *CVRGamepadUIShared_Icon) GetOverlay() string {
+	if x != nil && x.Overlay != nil {
+		return *x.Overlay
+	}
+	return ""
+}
+
+func (x *CVRGamepadUIShared_Icon) GetHwnd() uint32 {
+	if x != nil && x.Hwnd != nil {
+		return *x.Hwnd
+	}
+	return 0
+}
+
 type CVRGamepadUIShared_PathProperty_DashboardActions struct {
 	state         protoimpl.MessageState                `protogen:"open.v1"`
 	Actions       []*CVRGamepadUIShared_DashboardAction `protobuf:"bytes,1,rep,name=actions" json:"actions,omitempty"`
@@ -50531,7 +50981,7 @@ type CVRGamepadUIShared_PathProperty_DashboardActions struct {
 
 func (x *CVRGamepadUIShared_PathProperty_DashboardActions) Reset() {
 	*x = CVRGamepadUIShared_PathProperty_DashboardActions{}
-	mi := &file_common_proto_msgTypes[684]
+	mi := &file_common_proto_msgTypes[693]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50543,7 +50993,7 @@ func (x *CVRGamepadUIShared_PathProperty_DashboardActions) String() string {
 func (*CVRGamepadUIShared_PathProperty_DashboardActions) ProtoMessage() {}
 
 func (x *CVRGamepadUIShared_PathProperty_DashboardActions) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[684]
+	mi := &file_common_proto_msgTypes[693]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50556,7 +51006,7 @@ func (x *CVRGamepadUIShared_PathProperty_DashboardActions) ProtoReflect() protor
 
 // Deprecated: Use CVRGamepadUIShared_PathProperty_DashboardActions.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUIShared_PathProperty_DashboardActions) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{684}
+	return file_common_proto_rawDescGZIP(), []int{693}
 }
 
 func (x *CVRGamepadUIShared_PathProperty_DashboardActions) GetActions() []*CVRGamepadUIShared_DashboardAction {
@@ -50578,7 +51028,7 @@ type CVRGamepadUIShared_PathProperty_DashboardTabs struct {
 
 func (x *CVRGamepadUIShared_PathProperty_DashboardTabs) Reset() {
 	*x = CVRGamepadUIShared_PathProperty_DashboardTabs{}
-	mi := &file_common_proto_msgTypes[685]
+	mi := &file_common_proto_msgTypes[694]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50590,7 +51040,7 @@ func (x *CVRGamepadUIShared_PathProperty_DashboardTabs) String() string {
 func (*CVRGamepadUIShared_PathProperty_DashboardTabs) ProtoMessage() {}
 
 func (x *CVRGamepadUIShared_PathProperty_DashboardTabs) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[685]
+	mi := &file_common_proto_msgTypes[694]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50603,7 +51053,7 @@ func (x *CVRGamepadUIShared_PathProperty_DashboardTabs) ProtoReflect() protorefl
 
 // Deprecated: Use CVRGamepadUIShared_PathProperty_DashboardTabs.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUIShared_PathProperty_DashboardTabs) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{685}
+	return file_common_proto_rawDescGZIP(), []int{694}
 }
 
 func (x *CVRGamepadUIShared_PathProperty_DashboardTabs) GetTabs() []*CVRGamepadUIShared_PathProperty_DashboardTabs_Tab {
@@ -50648,7 +51098,7 @@ type CVRGamepadUIShared_PathProperty_DashboardTabs_Tab struct {
 
 func (x *CVRGamepadUIShared_PathProperty_DashboardTabs_Tab) Reset() {
 	*x = CVRGamepadUIShared_PathProperty_DashboardTabs_Tab{}
-	mi := &file_common_proto_msgTypes[686]
+	mi := &file_common_proto_msgTypes[695]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50660,7 +51110,7 @@ func (x *CVRGamepadUIShared_PathProperty_DashboardTabs_Tab) String() string {
 func (*CVRGamepadUIShared_PathProperty_DashboardTabs_Tab) ProtoMessage() {}
 
 func (x *CVRGamepadUIShared_PathProperty_DashboardTabs_Tab) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[686]
+	mi := &file_common_proto_msgTypes[695]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50673,7 +51123,7 @@ func (x *CVRGamepadUIShared_PathProperty_DashboardTabs_Tab) ProtoReflect() proto
 
 // Deprecated: Use CVRGamepadUIShared_PathProperty_DashboardTabs_Tab.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUIShared_PathProperty_DashboardTabs_Tab) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{686}
+	return file_common_proto_rawDescGZIP(), []int{695}
 }
 
 func (x *CVRGamepadUIShared_PathProperty_DashboardTabs_Tab) GetTabId() uint32 {
@@ -50720,7 +51170,7 @@ type CVRGamepadUIShared_PathProperty_DesktopWindows struct {
 
 func (x *CVRGamepadUIShared_PathProperty_DesktopWindows) Reset() {
 	*x = CVRGamepadUIShared_PathProperty_DesktopWindows{}
-	mi := &file_common_proto_msgTypes[687]
+	mi := &file_common_proto_msgTypes[696]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50732,7 +51182,7 @@ func (x *CVRGamepadUIShared_PathProperty_DesktopWindows) String() string {
 func (*CVRGamepadUIShared_PathProperty_DesktopWindows) ProtoMessage() {}
 
 func (x *CVRGamepadUIShared_PathProperty_DesktopWindows) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[687]
+	mi := &file_common_proto_msgTypes[696]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50745,7 +51195,7 @@ func (x *CVRGamepadUIShared_PathProperty_DesktopWindows) ProtoReflect() protoref
 
 // Deprecated: Use CVRGamepadUIShared_PathProperty_DesktopWindows.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUIShared_PathProperty_DesktopWindows) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{687}
+	return file_common_proto_rawDescGZIP(), []int{696}
 }
 
 func (x *CVRGamepadUIShared_PathProperty_DesktopWindows) GetWindows() []*CVRGamepadUIShared_PathProperty_DesktopWindows_Window {
@@ -50768,7 +51218,7 @@ type CVRGamepadUIShared_PathProperty_DesktopWindows_Window struct {
 
 func (x *CVRGamepadUIShared_PathProperty_DesktopWindows_Window) Reset() {
 	*x = CVRGamepadUIShared_PathProperty_DesktopWindows_Window{}
-	mi := &file_common_proto_msgTypes[688]
+	mi := &file_common_proto_msgTypes[697]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50780,7 +51230,7 @@ func (x *CVRGamepadUIShared_PathProperty_DesktopWindows_Window) String() string 
 func (*CVRGamepadUIShared_PathProperty_DesktopWindows_Window) ProtoMessage() {}
 
 func (x *CVRGamepadUIShared_PathProperty_DesktopWindows_Window) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[688]
+	mi := &file_common_proto_msgTypes[697]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50793,7 +51243,7 @@ func (x *CVRGamepadUIShared_PathProperty_DesktopWindows_Window) ProtoReflect() p
 
 // Deprecated: Use CVRGamepadUIShared_PathProperty_DesktopWindows_Window.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUIShared_PathProperty_DesktopWindows_Window) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{688}
+	return file_common_proto_rawDescGZIP(), []int{697}
 }
 
 func (x *CVRGamepadUIShared_PathProperty_DesktopWindows_Window) GetWindowId() uint32 {
@@ -50836,7 +51286,7 @@ type CVRGamepadUIShared_PathProperty_PowerOptions struct {
 
 func (x *CVRGamepadUIShared_PathProperty_PowerOptions) Reset() {
 	*x = CVRGamepadUIShared_PathProperty_PowerOptions{}
-	mi := &file_common_proto_msgTypes[689]
+	mi := &file_common_proto_msgTypes[698]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50848,7 +51298,7 @@ func (x *CVRGamepadUIShared_PathProperty_PowerOptions) String() string {
 func (*CVRGamepadUIShared_PathProperty_PowerOptions) ProtoMessage() {}
 
 func (x *CVRGamepadUIShared_PathProperty_PowerOptions) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[689]
+	mi := &file_common_proto_msgTypes[698]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50861,7 +51311,7 @@ func (x *CVRGamepadUIShared_PathProperty_PowerOptions) ProtoReflect() protorefle
 
 // Deprecated: Use CVRGamepadUIShared_PathProperty_PowerOptions.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUIShared_PathProperty_PowerOptions) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{689}
+	return file_common_proto_rawDescGZIP(), []int{698}
 }
 
 func (x *CVRGamepadUIShared_PathProperty_PowerOptions) GetCanSleep() bool {
@@ -50902,7 +51352,7 @@ type CVRGamepadUIShared_PathProperty_VRVersionInfo struct {
 
 func (x *CVRGamepadUIShared_PathProperty_VRVersionInfo) Reset() {
 	*x = CVRGamepadUIShared_PathProperty_VRVersionInfo{}
-	mi := &file_common_proto_msgTypes[690]
+	mi := &file_common_proto_msgTypes[699]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50914,7 +51364,7 @@ func (x *CVRGamepadUIShared_PathProperty_VRVersionInfo) String() string {
 func (*CVRGamepadUIShared_PathProperty_VRVersionInfo) ProtoMessage() {}
 
 func (x *CVRGamepadUIShared_PathProperty_VRVersionInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[690]
+	mi := &file_common_proto_msgTypes[699]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50927,7 +51377,7 @@ func (x *CVRGamepadUIShared_PathProperty_VRVersionInfo) ProtoReflect() protorefl
 
 // Deprecated: Use CVRGamepadUIShared_PathProperty_VRVersionInfo.ProtoReflect.Descriptor instead.
 func (*CVRGamepadUIShared_PathProperty_VRVersionInfo) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{690}
+	return file_common_proto_rawDescGZIP(), []int{699}
 }
 
 func (x *CVRGamepadUIShared_PathProperty_VRVersionInfo) GetVersion() string {
@@ -50958,7 +51408,7 @@ type EncryptedAppTicket struct {
 
 func (x *EncryptedAppTicket) Reset() {
 	*x = EncryptedAppTicket{}
-	mi := &file_common_proto_msgTypes[691]
+	mi := &file_common_proto_msgTypes[700]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -50970,7 +51420,7 @@ func (x *EncryptedAppTicket) String() string {
 func (*EncryptedAppTicket) ProtoMessage() {}
 
 func (x *EncryptedAppTicket) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[691]
+	mi := &file_common_proto_msgTypes[700]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -50983,7 +51433,7 @@ func (x *EncryptedAppTicket) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EncryptedAppTicket.ProtoReflect.Descriptor instead.
 func (*EncryptedAppTicket) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{691}
+	return file_common_proto_rawDescGZIP(), []int{700}
 }
 
 func (x *EncryptedAppTicket) GetTicketVersionNo() uint32 {
@@ -51048,7 +51498,7 @@ type LoyaltyRewardDefinition struct {
 
 func (x *LoyaltyRewardDefinition) Reset() {
 	*x = LoyaltyRewardDefinition{}
-	mi := &file_common_proto_msgTypes[692]
+	mi := &file_common_proto_msgTypes[701]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -51060,7 +51510,7 @@ func (x *LoyaltyRewardDefinition) String() string {
 func (*LoyaltyRewardDefinition) ProtoMessage() {}
 
 func (x *LoyaltyRewardDefinition) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[692]
+	mi := &file_common_proto_msgTypes[701]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -51073,7 +51523,7 @@ func (x *LoyaltyRewardDefinition) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LoyaltyRewardDefinition.ProtoReflect.Descriptor instead.
 func (*LoyaltyRewardDefinition) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{692}
+	return file_common_proto_rawDescGZIP(), []int{701}
 }
 
 func (x *LoyaltyRewardDefinition) GetAppid() uint32 {
@@ -51213,7 +51663,7 @@ type LoyaltyRewardDefinition_BadgeData struct {
 
 func (x *LoyaltyRewardDefinition_BadgeData) Reset() {
 	*x = LoyaltyRewardDefinition_BadgeData{}
-	mi := &file_common_proto_msgTypes[693]
+	mi := &file_common_proto_msgTypes[702]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -51225,7 +51675,7 @@ func (x *LoyaltyRewardDefinition_BadgeData) String() string {
 func (*LoyaltyRewardDefinition_BadgeData) ProtoMessage() {}
 
 func (x *LoyaltyRewardDefinition_BadgeData) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[693]
+	mi := &file_common_proto_msgTypes[702]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -51238,7 +51688,7 @@ func (x *LoyaltyRewardDefinition_BadgeData) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use LoyaltyRewardDefinition_BadgeData.ProtoReflect.Descriptor instead.
 func (*LoyaltyRewardDefinition_BadgeData) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{693}
+	return file_common_proto_rawDescGZIP(), []int{702}
 }
 
 func (x *LoyaltyRewardDefinition_BadgeData) GetLevel() int32 {
@@ -51277,7 +51727,7 @@ type LoyaltyRewardDefinition_CommunityItemData struct {
 
 func (x *LoyaltyRewardDefinition_CommunityItemData) Reset() {
 	*x = LoyaltyRewardDefinition_CommunityItemData{}
-	mi := &file_common_proto_msgTypes[694]
+	mi := &file_common_proto_msgTypes[703]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -51289,7 +51739,7 @@ func (x *LoyaltyRewardDefinition_CommunityItemData) String() string {
 func (*LoyaltyRewardDefinition_CommunityItemData) ProtoMessage() {}
 
 func (x *LoyaltyRewardDefinition_CommunityItemData) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[694]
+	mi := &file_common_proto_msgTypes[703]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -51302,7 +51752,7 @@ func (x *LoyaltyRewardDefinition_CommunityItemData) ProtoReflect() protoreflect.
 
 // Deprecated: Use LoyaltyRewardDefinition_CommunityItemData.ProtoReflect.Descriptor instead.
 func (*LoyaltyRewardDefinition_CommunityItemData) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{694}
+	return file_common_proto_rawDescGZIP(), []int{703}
 }
 
 func (x *LoyaltyRewardDefinition_CommunityItemData) GetItemName() string {
@@ -51409,7 +51859,7 @@ type StoreBrowseContext struct {
 
 func (x *StoreBrowseContext) Reset() {
 	*x = StoreBrowseContext{}
-	mi := &file_common_proto_msgTypes[695]
+	mi := &file_common_proto_msgTypes[704]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -51421,7 +51871,7 @@ func (x *StoreBrowseContext) String() string {
 func (*StoreBrowseContext) ProtoMessage() {}
 
 func (x *StoreBrowseContext) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[695]
+	mi := &file_common_proto_msgTypes[704]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -51434,7 +51884,7 @@ func (x *StoreBrowseContext) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreBrowseContext.ProtoReflect.Descriptor instead.
 func (*StoreBrowseContext) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{695}
+	return file_common_proto_rawDescGZIP(), []int{704}
 }
 
 func (x *StoreBrowseContext) GetLanguage() string {
@@ -51490,7 +51940,7 @@ const (
 
 func (x *StoreBrowseFilterFailure) Reset() {
 	*x = StoreBrowseFilterFailure{}
-	mi := &file_common_proto_msgTypes[696]
+	mi := &file_common_proto_msgTypes[705]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -51502,7 +51952,7 @@ func (x *StoreBrowseFilterFailure) String() string {
 func (*StoreBrowseFilterFailure) ProtoMessage() {}
 
 func (x *StoreBrowseFilterFailure) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[696]
+	mi := &file_common_proto_msgTypes[705]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -51515,7 +51965,7 @@ func (x *StoreBrowseFilterFailure) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreBrowseFilterFailure.ProtoReflect.Descriptor instead.
 func (*StoreBrowseFilterFailure) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{696}
+	return file_common_proto_rawDescGZIP(), []int{705}
 }
 
 func (x *StoreBrowseFilterFailure) GetFilterFailure() int32 {
@@ -51621,7 +52071,7 @@ type StoreBrowseItemDataRequest struct {
 
 func (x *StoreBrowseItemDataRequest) Reset() {
 	*x = StoreBrowseItemDataRequest{}
-	mi := &file_common_proto_msgTypes[697]
+	mi := &file_common_proto_msgTypes[706]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -51633,7 +52083,7 @@ func (x *StoreBrowseItemDataRequest) String() string {
 func (*StoreBrowseItemDataRequest) ProtoMessage() {}
 
 func (x *StoreBrowseItemDataRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[697]
+	mi := &file_common_proto_msgTypes[706]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -51646,7 +52096,7 @@ func (x *StoreBrowseItemDataRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreBrowseItemDataRequest.ProtoReflect.Descriptor instead.
 func (*StoreBrowseItemDataRequest) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{697}
+	return file_common_proto_rawDescGZIP(), []int{706}
 }
 
 func (x *StoreBrowseItemDataRequest) GetIncludeAssets() bool {
@@ -51785,7 +52235,7 @@ type StoreGameRating struct {
 
 func (x *StoreGameRating) Reset() {
 	*x = StoreGameRating{}
-	mi := &file_common_proto_msgTypes[698]
+	mi := &file_common_proto_msgTypes[707]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -51797,7 +52247,7 @@ func (x *StoreGameRating) String() string {
 func (*StoreGameRating) ProtoMessage() {}
 
 func (x *StoreGameRating) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[698]
+	mi := &file_common_proto_msgTypes[707]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -51810,7 +52260,7 @@ func (x *StoreGameRating) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreGameRating.ProtoReflect.Descriptor instead.
 func (*StoreGameRating) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{698}
+	return file_common_proto_rawDescGZIP(), []int{707}
 }
 
 func (x *StoreGameRating) GetType() string {
@@ -51921,7 +52371,7 @@ type StoreItem struct {
 
 func (x *StoreItem) Reset() {
 	*x = StoreItem{}
-	mi := &file_common_proto_msgTypes[699]
+	mi := &file_common_proto_msgTypes[708]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -51933,7 +52383,7 @@ func (x *StoreItem) String() string {
 func (*StoreItem) ProtoMessage() {}
 
 func (x *StoreItem) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[699]
+	mi := &file_common_proto_msgTypes[708]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -51946,7 +52396,7 @@ func (x *StoreItem) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem.ProtoReflect.Descriptor instead.
 func (*StoreItem) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{699}
+	return file_common_proto_rawDescGZIP(), []int{708}
 }
 
 func (x *StoreItem) GetItemType() int32 {
@@ -52275,7 +52725,7 @@ type StoreItem_Assets struct {
 
 func (x *StoreItem_Assets) Reset() {
 	*x = StoreItem_Assets{}
-	mi := &file_common_proto_msgTypes[700]
+	mi := &file_common_proto_msgTypes[709]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -52287,7 +52737,7 @@ func (x *StoreItem_Assets) String() string {
 func (*StoreItem_Assets) ProtoMessage() {}
 
 func (x *StoreItem_Assets) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[700]
+	mi := &file_common_proto_msgTypes[709]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -52300,7 +52750,7 @@ func (x *StoreItem_Assets) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Assets.ProtoReflect.Descriptor instead.
 func (*StoreItem_Assets) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{700}
+	return file_common_proto_rawDescGZIP(), []int{709}
 }
 
 func (x *StoreItem_Assets) GetAssetUrlFormat() string {
@@ -52429,7 +52879,7 @@ type StoreItem_BasicInfo struct {
 
 func (x *StoreItem_BasicInfo) Reset() {
 	*x = StoreItem_BasicInfo{}
-	mi := &file_common_proto_msgTypes[701]
+	mi := &file_common_proto_msgTypes[710]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -52441,7 +52891,7 @@ func (x *StoreItem_BasicInfo) String() string {
 func (*StoreItem_BasicInfo) ProtoMessage() {}
 
 func (x *StoreItem_BasicInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[701]
+	mi := &file_common_proto_msgTypes[710]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -52454,7 +52904,7 @@ func (x *StoreItem_BasicInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_BasicInfo.ProtoReflect.Descriptor instead.
 func (*StoreItem_BasicInfo) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{701}
+	return file_common_proto_rawDescGZIP(), []int{710}
 }
 
 func (x *StoreItem_BasicInfo) GetShortDescription() string {
@@ -52503,7 +52953,7 @@ type StoreItem_BasicInfo_CreatorHomeLink struct {
 
 func (x *StoreItem_BasicInfo_CreatorHomeLink) Reset() {
 	*x = StoreItem_BasicInfo_CreatorHomeLink{}
-	mi := &file_common_proto_msgTypes[702]
+	mi := &file_common_proto_msgTypes[711]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -52515,7 +52965,7 @@ func (x *StoreItem_BasicInfo_CreatorHomeLink) String() string {
 func (*StoreItem_BasicInfo_CreatorHomeLink) ProtoMessage() {}
 
 func (x *StoreItem_BasicInfo_CreatorHomeLink) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[702]
+	mi := &file_common_proto_msgTypes[711]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -52528,7 +52978,7 @@ func (x *StoreItem_BasicInfo_CreatorHomeLink) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use StoreItem_BasicInfo_CreatorHomeLink.ProtoReflect.Descriptor instead.
 func (*StoreItem_BasicInfo_CreatorHomeLink) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{702}
+	return file_common_proto_rawDescGZIP(), []int{711}
 }
 
 func (x *StoreItem_BasicInfo_CreatorHomeLink) GetName() string {
@@ -52557,7 +53007,7 @@ type StoreItem_Categories struct {
 
 func (x *StoreItem_Categories) Reset() {
 	*x = StoreItem_Categories{}
-	mi := &file_common_proto_msgTypes[703]
+	mi := &file_common_proto_msgTypes[712]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -52569,7 +53019,7 @@ func (x *StoreItem_Categories) String() string {
 func (*StoreItem_Categories) ProtoMessage() {}
 
 func (x *StoreItem_Categories) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[703]
+	mi := &file_common_proto_msgTypes[712]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -52582,7 +53032,7 @@ func (x *StoreItem_Categories) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Categories.ProtoReflect.Descriptor instead.
 func (*StoreItem_Categories) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{703}
+	return file_common_proto_rawDescGZIP(), []int{712}
 }
 
 func (x *StoreItem_Categories) GetSupportedPlayerCategoryids() []uint32 {
@@ -52618,7 +53068,7 @@ type StoreItem_FreeWeekend struct {
 
 func (x *StoreItem_FreeWeekend) Reset() {
 	*x = StoreItem_FreeWeekend{}
-	mi := &file_common_proto_msgTypes[704]
+	mi := &file_common_proto_msgTypes[713]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -52630,7 +53080,7 @@ func (x *StoreItem_FreeWeekend) String() string {
 func (*StoreItem_FreeWeekend) ProtoMessage() {}
 
 func (x *StoreItem_FreeWeekend) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[704]
+	mi := &file_common_proto_msgTypes[713]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -52643,7 +53093,7 @@ func (x *StoreItem_FreeWeekend) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_FreeWeekend.ProtoReflect.Descriptor instead.
 func (*StoreItem_FreeWeekend) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{704}
+	return file_common_proto_rawDescGZIP(), []int{713}
 }
 
 func (x *StoreItem_FreeWeekend) GetStartTime() uint32 {
@@ -52678,7 +53128,7 @@ type StoreItem_IncludedItems struct {
 
 func (x *StoreItem_IncludedItems) Reset() {
 	*x = StoreItem_IncludedItems{}
-	mi := &file_common_proto_msgTypes[705]
+	mi := &file_common_proto_msgTypes[714]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -52690,7 +53140,7 @@ func (x *StoreItem_IncludedItems) String() string {
 func (*StoreItem_IncludedItems) ProtoMessage() {}
 
 func (x *StoreItem_IncludedItems) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[705]
+	mi := &file_common_proto_msgTypes[714]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -52703,7 +53153,7 @@ func (x *StoreItem_IncludedItems) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_IncludedItems.ProtoReflect.Descriptor instead.
 func (*StoreItem_IncludedItems) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{705}
+	return file_common_proto_rawDescGZIP(), []int{714}
 }
 
 func (x *StoreItem_IncludedItems) GetIncludedApps() []*StoreItem {
@@ -52732,7 +53182,7 @@ type StoreItem_Link struct {
 
 func (x *StoreItem_Link) Reset() {
 	*x = StoreItem_Link{}
-	mi := &file_common_proto_msgTypes[706]
+	mi := &file_common_proto_msgTypes[715]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -52744,7 +53194,7 @@ func (x *StoreItem_Link) String() string {
 func (*StoreItem_Link) ProtoMessage() {}
 
 func (x *StoreItem_Link) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[706]
+	mi := &file_common_proto_msgTypes[715]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -52757,7 +53207,7 @@ func (x *StoreItem_Link) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Link.ProtoReflect.Descriptor instead.
 func (*StoreItem_Link) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{706}
+	return file_common_proto_rawDescGZIP(), []int{715}
 }
 
 func (x *StoreItem_Link) GetLinkType() int32 {
@@ -52796,7 +53246,7 @@ type StoreItem_Platforms struct {
 
 func (x *StoreItem_Platforms) Reset() {
 	*x = StoreItem_Platforms{}
-	mi := &file_common_proto_msgTypes[707]
+	mi := &file_common_proto_msgTypes[716]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -52808,7 +53258,7 @@ func (x *StoreItem_Platforms) String() string {
 func (*StoreItem_Platforms) ProtoMessage() {}
 
 func (x *StoreItem_Platforms) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[707]
+	mi := &file_common_proto_msgTypes[716]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -52821,7 +53271,7 @@ func (x *StoreItem_Platforms) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Platforms.ProtoReflect.Descriptor instead.
 func (*StoreItem_Platforms) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{707}
+	return file_common_proto_rawDescGZIP(), []int{716}
 }
 
 func (x *StoreItem_Platforms) GetWindows() bool {
@@ -52881,7 +53331,7 @@ type StoreItem_Platforms_VRSupport struct {
 
 func (x *StoreItem_Platforms_VRSupport) Reset() {
 	*x = StoreItem_Platforms_VRSupport{}
-	mi := &file_common_proto_msgTypes[708]
+	mi := &file_common_proto_msgTypes[717]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -52893,7 +53343,7 @@ func (x *StoreItem_Platforms_VRSupport) String() string {
 func (*StoreItem_Platforms_VRSupport) ProtoMessage() {}
 
 func (x *StoreItem_Platforms_VRSupport) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[708]
+	mi := &file_common_proto_msgTypes[717]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -52906,7 +53356,7 @@ func (x *StoreItem_Platforms_VRSupport) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Platforms_VRSupport.ProtoReflect.Descriptor instead.
 func (*StoreItem_Platforms_VRSupport) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{708}
+	return file_common_proto_rawDescGZIP(), []int{717}
 }
 
 func (x *StoreItem_Platforms_VRSupport) GetVrhmd() bool {
@@ -52959,19 +53409,14 @@ type StoreItem_PurchaseOption struct {
 	PurchaseOptionName                 *string                                  `protobuf:"bytes,3,opt,name=purchase_option_name,json=purchaseOptionName" json:"purchase_option_name,omitempty"`
 	FinalPriceInCents                  *int64                                   `protobuf:"varint,5,opt,name=final_price_in_cents,json=finalPriceInCents" json:"final_price_in_cents,omitempty"`
 	OriginalPriceInCents               *int64                                   `protobuf:"varint,6,opt,name=original_price_in_cents,json=originalPriceInCents" json:"original_price_in_cents,omitempty"`
-	UserFinalPriceInCents              *int64                                   `protobuf:"varint,7,opt,name=user_final_price_in_cents,json=userFinalPriceInCents" json:"user_final_price_in_cents,omitempty"`
 	FormattedFinalPrice                *string                                  `protobuf:"bytes,8,opt,name=formatted_final_price,json=formattedFinalPrice" json:"formatted_final_price,omitempty"`
 	FormattedOriginalPrice             *string                                  `protobuf:"bytes,9,opt,name=formatted_original_price,json=formattedOriginalPrice" json:"formatted_original_price,omitempty"`
 	DiscountPct                        *int32                                   `protobuf:"varint,10,opt,name=discount_pct,json=discountPct" json:"discount_pct,omitempty"`
-	UserDiscountPct                    *int32                                   `protobuf:"varint,11,opt,name=user_discount_pct,json=userDiscountPct" json:"user_discount_pct,omitempty"`
 	BundleDiscountPct                  *int32                                   `protobuf:"varint,12,opt,name=bundle_discount_pct,json=bundleDiscountPct" json:"bundle_discount_pct,omitempty"`
 	IsFreeToKeep                       *bool                                    `protobuf:"varint,13,opt,name=is_free_to_keep,json=isFreeToKeep" json:"is_free_to_keep,omitempty"`
 	PriceBeforeBundleDiscount          *int64                                   `protobuf:"varint,14,opt,name=price_before_bundle_discount,json=priceBeforeBundleDiscount" json:"price_before_bundle_discount,omitempty"`
 	FormattedPriceBeforeBundleDiscount *string                                  `protobuf:"bytes,15,opt,name=formatted_price_before_bundle_discount,json=formattedPriceBeforeBundleDiscount" json:"formatted_price_before_bundle_discount,omitempty"`
 	ActiveDiscounts                    []*StoreItem_PurchaseOption_Discount     `protobuf:"bytes,20,rep,name=active_discounts,json=activeDiscounts" json:"active_discounts,omitempty"`
-	UserActiveDiscounts                []*StoreItem_PurchaseOption_Discount     `protobuf:"bytes,21,rep,name=user_active_discounts,json=userActiveDiscounts" json:"user_active_discounts,omitempty"`
-	InactiveDiscounts                  []*StoreItem_PurchaseOption_Discount     `protobuf:"bytes,22,rep,name=inactive_discounts,json=inactiveDiscounts" json:"inactive_discounts,omitempty"`
-	UserCanPurchase                    *bool                                    `protobuf:"varint,30,opt,name=user_can_purchase,json=userCanPurchase" json:"user_can_purchase,omitempty"`
 	UserCanPurchaseAsGift              *bool                                    `protobuf:"varint,31,opt,name=user_can_purchase_as_gift,json=userCanPurchaseAsGift" json:"user_can_purchase_as_gift,omitempty"`
 	IsCommercialLicense                *bool                                    `protobuf:"varint,40,opt,name=is_commercial_license,json=isCommercialLicense" json:"is_commercial_license,omitempty"`
 	ShouldSuppressDiscountPct          *bool                                    `protobuf:"varint,41,opt,name=should_suppress_discount_pct,json=shouldSuppressDiscountPct" json:"should_suppress_discount_pct,omitempty"`
@@ -52993,7 +53438,7 @@ const (
 
 func (x *StoreItem_PurchaseOption) Reset() {
 	*x = StoreItem_PurchaseOption{}
-	mi := &file_common_proto_msgTypes[709]
+	mi := &file_common_proto_msgTypes[718]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53005,7 +53450,7 @@ func (x *StoreItem_PurchaseOption) String() string {
 func (*StoreItem_PurchaseOption) ProtoMessage() {}
 
 func (x *StoreItem_PurchaseOption) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[709]
+	mi := &file_common_proto_msgTypes[718]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53018,7 +53463,7 @@ func (x *StoreItem_PurchaseOption) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_PurchaseOption.ProtoReflect.Descriptor instead.
 func (*StoreItem_PurchaseOption) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{709}
+	return file_common_proto_rawDescGZIP(), []int{718}
 }
 
 func (x *StoreItem_PurchaseOption) GetPackageid() int32 {
@@ -53056,13 +53501,6 @@ func (x *StoreItem_PurchaseOption) GetOriginalPriceInCents() int64 {
 	return 0
 }
 
-func (x *StoreItem_PurchaseOption) GetUserFinalPriceInCents() int64 {
-	if x != nil && x.UserFinalPriceInCents != nil {
-		return *x.UserFinalPriceInCents
-	}
-	return 0
-}
-
 func (x *StoreItem_PurchaseOption) GetFormattedFinalPrice() string {
 	if x != nil && x.FormattedFinalPrice != nil {
 		return *x.FormattedFinalPrice
@@ -53080,13 +53518,6 @@ func (x *StoreItem_PurchaseOption) GetFormattedOriginalPrice() string {
 func (x *StoreItem_PurchaseOption) GetDiscountPct() int32 {
 	if x != nil && x.DiscountPct != nil {
 		return *x.DiscountPct
-	}
-	return 0
-}
-
-func (x *StoreItem_PurchaseOption) GetUserDiscountPct() int32 {
-	if x != nil && x.UserDiscountPct != nil {
-		return *x.UserDiscountPct
 	}
 	return 0
 }
@@ -53124,27 +53555,6 @@ func (x *StoreItem_PurchaseOption) GetActiveDiscounts() []*StoreItem_PurchaseOpt
 		return x.ActiveDiscounts
 	}
 	return nil
-}
-
-func (x *StoreItem_PurchaseOption) GetUserActiveDiscounts() []*StoreItem_PurchaseOption_Discount {
-	if x != nil {
-		return x.UserActiveDiscounts
-	}
-	return nil
-}
-
-func (x *StoreItem_PurchaseOption) GetInactiveDiscounts() []*StoreItem_PurchaseOption_Discount {
-	if x != nil {
-		return x.InactiveDiscounts
-	}
-	return nil
-}
-
-func (x *StoreItem_PurchaseOption) GetUserCanPurchase() bool {
-	if x != nil && x.UserCanPurchase != nil {
-		return *x.UserCanPurchase
-	}
-	return false
 }
 
 func (x *StoreItem_PurchaseOption) GetUserCanPurchaseAsGift() bool {
@@ -53222,7 +53632,7 @@ type StoreItem_PurchaseOption_Discount struct {
 
 func (x *StoreItem_PurchaseOption_Discount) Reset() {
 	*x = StoreItem_PurchaseOption_Discount{}
-	mi := &file_common_proto_msgTypes[710]
+	mi := &file_common_proto_msgTypes[719]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53234,7 +53644,7 @@ func (x *StoreItem_PurchaseOption_Discount) String() string {
 func (*StoreItem_PurchaseOption_Discount) ProtoMessage() {}
 
 func (x *StoreItem_PurchaseOption_Discount) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[710]
+	mi := &file_common_proto_msgTypes[719]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53247,7 +53657,7 @@ func (x *StoreItem_PurchaseOption_Discount) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use StoreItem_PurchaseOption_Discount.ProtoReflect.Descriptor instead.
 func (*StoreItem_PurchaseOption_Discount) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{710}
+	return file_common_proto_rawDescGZIP(), []int{719}
 }
 
 func (x *StoreItem_PurchaseOption_Discount) GetDiscountAmount() int64 {
@@ -53286,7 +53696,7 @@ type StoreItem_PurchaseOption_RecurrenceInfo struct {
 
 func (x *StoreItem_PurchaseOption_RecurrenceInfo) Reset() {
 	*x = StoreItem_PurchaseOption_RecurrenceInfo{}
-	mi := &file_common_proto_msgTypes[711]
+	mi := &file_common_proto_msgTypes[720]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53298,7 +53708,7 @@ func (x *StoreItem_PurchaseOption_RecurrenceInfo) String() string {
 func (*StoreItem_PurchaseOption_RecurrenceInfo) ProtoMessage() {}
 
 func (x *StoreItem_PurchaseOption_RecurrenceInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[711]
+	mi := &file_common_proto_msgTypes[720]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53311,7 +53721,7 @@ func (x *StoreItem_PurchaseOption_RecurrenceInfo) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use StoreItem_PurchaseOption_RecurrenceInfo.ProtoReflect.Descriptor instead.
 func (*StoreItem_PurchaseOption_RecurrenceInfo) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{711}
+	return file_common_proto_rawDescGZIP(), []int{720}
 }
 
 func (x *StoreItem_PurchaseOption_RecurrenceInfo) GetPackageid() int32 {
@@ -53368,7 +53778,7 @@ type StoreItem_RelatedItems struct {
 
 func (x *StoreItem_RelatedItems) Reset() {
 	*x = StoreItem_RelatedItems{}
-	mi := &file_common_proto_msgTypes[712]
+	mi := &file_common_proto_msgTypes[721]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53380,7 +53790,7 @@ func (x *StoreItem_RelatedItems) String() string {
 func (*StoreItem_RelatedItems) ProtoMessage() {}
 
 func (x *StoreItem_RelatedItems) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[712]
+	mi := &file_common_proto_msgTypes[721]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53393,7 +53803,7 @@ func (x *StoreItem_RelatedItems) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_RelatedItems.ProtoReflect.Descriptor instead.
 func (*StoreItem_RelatedItems) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{712}
+	return file_common_proto_rawDescGZIP(), []int{721}
 }
 
 func (x *StoreItem_RelatedItems) GetParentAppid() uint32 {
@@ -53438,7 +53848,7 @@ type StoreItem_ReleaseInfo struct {
 
 func (x *StoreItem_ReleaseInfo) Reset() {
 	*x = StoreItem_ReleaseInfo{}
-	mi := &file_common_proto_msgTypes[713]
+	mi := &file_common_proto_msgTypes[722]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53450,7 +53860,7 @@ func (x *StoreItem_ReleaseInfo) String() string {
 func (*StoreItem_ReleaseInfo) ProtoMessage() {}
 
 func (x *StoreItem_ReleaseInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[713]
+	mi := &file_common_proto_msgTypes[722]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53463,7 +53873,7 @@ func (x *StoreItem_ReleaseInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_ReleaseInfo.ProtoReflect.Descriptor instead.
 func (*StoreItem_ReleaseInfo) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{713}
+	return file_common_proto_rawDescGZIP(), []int{722}
 }
 
 func (x *StoreItem_ReleaseInfo) GetSteamReleaseDate() uint32 {
@@ -53552,16 +53962,17 @@ func (x *StoreItem_ReleaseInfo) GetLimitedLaunchActive() bool {
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 type StoreItem_Reviews struct {
-	state             protoimpl.MessageState                `protogen:"open.v1"`
-	SummaryFiltered   *StoreItem_Reviews_StoreReviewSummary `protobuf:"bytes,1,opt,name=summary_filtered,json=summaryFiltered" json:"summary_filtered,omitempty"`
-	SummaryUnfiltered *StoreItem_Reviews_StoreReviewSummary `protobuf:"bytes,2,opt,name=summary_unfiltered,json=summaryUnfiltered" json:"summary_unfiltered,omitempty"`
-	unknownFields     protoimpl.UnknownFields
-	sizeCache         protoimpl.SizeCache
+	state                   protoimpl.MessageState                `protogen:"open.v1"`
+	SummaryFiltered         *StoreItem_Reviews_StoreReviewSummary `protobuf:"bytes,1,opt,name=summary_filtered,json=summaryFiltered" json:"summary_filtered,omitempty"`
+	SummaryUnfiltered       *StoreItem_Reviews_StoreReviewSummary `protobuf:"bytes,2,opt,name=summary_unfiltered,json=summaryUnfiltered" json:"summary_unfiltered,omitempty"`
+	SummaryLanguageSpecific *StoreItem_Reviews_StoreReviewSummary `protobuf:"bytes,3,opt,name=summary_language_specific,json=summaryLanguageSpecific" json:"summary_language_specific,omitempty"`
+	unknownFields           protoimpl.UnknownFields
+	sizeCache               protoimpl.SizeCache
 }
 
 func (x *StoreItem_Reviews) Reset() {
 	*x = StoreItem_Reviews{}
-	mi := &file_common_proto_msgTypes[714]
+	mi := &file_common_proto_msgTypes[723]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53573,7 +53984,7 @@ func (x *StoreItem_Reviews) String() string {
 func (*StoreItem_Reviews) ProtoMessage() {}
 
 func (x *StoreItem_Reviews) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[714]
+	mi := &file_common_proto_msgTypes[723]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53586,7 +53997,7 @@ func (x *StoreItem_Reviews) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Reviews.ProtoReflect.Descriptor instead.
 func (*StoreItem_Reviews) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{714}
+	return file_common_proto_rawDescGZIP(), []int{723}
 }
 
 func (x *StoreItem_Reviews) GetSummaryFiltered() *StoreItem_Reviews_StoreReviewSummary {
@@ -53599,6 +54010,13 @@ func (x *StoreItem_Reviews) GetSummaryFiltered() *StoreItem_Reviews_StoreReviewS
 func (x *StoreItem_Reviews) GetSummaryUnfiltered() *StoreItem_Reviews_StoreReviewSummary {
 	if x != nil {
 		return x.SummaryUnfiltered
+	}
+	return nil
+}
+
+func (x *StoreItem_Reviews) GetSummaryLanguageSpecific() *StoreItem_Reviews_StoreReviewSummary {
+	if x != nil {
+		return x.SummaryLanguageSpecific
 	}
 	return nil
 }
@@ -53616,7 +54034,7 @@ type StoreItem_Reviews_StoreReviewSummary struct {
 
 func (x *StoreItem_Reviews_StoreReviewSummary) Reset() {
 	*x = StoreItem_Reviews_StoreReviewSummary{}
-	mi := &file_common_proto_msgTypes[715]
+	mi := &file_common_proto_msgTypes[724]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53628,7 +54046,7 @@ func (x *StoreItem_Reviews_StoreReviewSummary) String() string {
 func (*StoreItem_Reviews_StoreReviewSummary) ProtoMessage() {}
 
 func (x *StoreItem_Reviews_StoreReviewSummary) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[715]
+	mi := &file_common_proto_msgTypes[724]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53641,7 +54059,7 @@ func (x *StoreItem_Reviews_StoreReviewSummary) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use StoreItem_Reviews_StoreReviewSummary.ProtoReflect.Descriptor instead.
 func (*StoreItem_Reviews_StoreReviewSummary) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{715}
+	return file_common_proto_rawDescGZIP(), []int{724}
 }
 
 func (x *StoreItem_Reviews_StoreReviewSummary) GetReviewCount() uint32 {
@@ -53683,7 +54101,7 @@ type StoreItem_Screenshots struct {
 
 func (x *StoreItem_Screenshots) Reset() {
 	*x = StoreItem_Screenshots{}
-	mi := &file_common_proto_msgTypes[716]
+	mi := &file_common_proto_msgTypes[725]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53695,7 +54113,7 @@ func (x *StoreItem_Screenshots) String() string {
 func (*StoreItem_Screenshots) ProtoMessage() {}
 
 func (x *StoreItem_Screenshots) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[716]
+	mi := &file_common_proto_msgTypes[725]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53708,7 +54126,7 @@ func (x *StoreItem_Screenshots) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Screenshots.ProtoReflect.Descriptor instead.
 func (*StoreItem_Screenshots) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{716}
+	return file_common_proto_rawDescGZIP(), []int{725}
 }
 
 func (x *StoreItem_Screenshots) GetAllAgesScreenshots() []*StoreItem_Screenshots_Screenshot {
@@ -53736,7 +54154,7 @@ type StoreItem_Screenshots_Screenshot struct {
 
 func (x *StoreItem_Screenshots_Screenshot) Reset() {
 	*x = StoreItem_Screenshots_Screenshot{}
-	mi := &file_common_proto_msgTypes[717]
+	mi := &file_common_proto_msgTypes[726]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53748,7 +54166,7 @@ func (x *StoreItem_Screenshots_Screenshot) String() string {
 func (*StoreItem_Screenshots_Screenshot) ProtoMessage() {}
 
 func (x *StoreItem_Screenshots_Screenshot) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[717]
+	mi := &file_common_proto_msgTypes[726]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53761,7 +54179,7 @@ func (x *StoreItem_Screenshots_Screenshot) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Screenshots_Screenshot.ProtoReflect.Descriptor instead.
 func (*StoreItem_Screenshots_Screenshot) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{717}
+	return file_common_proto_rawDescGZIP(), []int{726}
 }
 
 func (x *StoreItem_Screenshots_Screenshot) GetFilename() string {
@@ -53798,7 +54216,7 @@ const (
 
 func (x *StoreItem_SupportedLanguage) Reset() {
 	*x = StoreItem_SupportedLanguage{}
-	mi := &file_common_proto_msgTypes[718]
+	mi := &file_common_proto_msgTypes[727]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53810,7 +54228,7 @@ func (x *StoreItem_SupportedLanguage) String() string {
 func (*StoreItem_SupportedLanguage) ProtoMessage() {}
 
 func (x *StoreItem_SupportedLanguage) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[718]
+	mi := &file_common_proto_msgTypes[727]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53823,7 +54241,7 @@ func (x *StoreItem_SupportedLanguage) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_SupportedLanguage.ProtoReflect.Descriptor instead.
 func (*StoreItem_SupportedLanguage) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{718}
+	return file_common_proto_rawDescGZIP(), []int{727}
 }
 
 func (x *StoreItem_SupportedLanguage) GetElanguage() int32 {
@@ -53872,7 +54290,7 @@ type StoreItem_Tag struct {
 
 func (x *StoreItem_Tag) Reset() {
 	*x = StoreItem_Tag{}
-	mi := &file_common_proto_msgTypes[719]
+	mi := &file_common_proto_msgTypes[728]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53884,7 +54302,7 @@ func (x *StoreItem_Tag) String() string {
 func (*StoreItem_Tag) ProtoMessage() {}
 
 func (x *StoreItem_Tag) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[719]
+	mi := &file_common_proto_msgTypes[728]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53897,7 +54315,7 @@ func (x *StoreItem_Tag) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Tag.ProtoReflect.Descriptor instead.
 func (*StoreItem_Tag) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{719}
+	return file_common_proto_rawDescGZIP(), []int{728}
 }
 
 func (x *StoreItem_Tag) GetTagid() uint32 {
@@ -53925,7 +54343,7 @@ type StoreItem_Trailers struct {
 
 func (x *StoreItem_Trailers) Reset() {
 	*x = StoreItem_Trailers{}
-	mi := &file_common_proto_msgTypes[720]
+	mi := &file_common_proto_msgTypes[729]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53937,7 +54355,7 @@ func (x *StoreItem_Trailers) String() string {
 func (*StoreItem_Trailers) ProtoMessage() {}
 
 func (x *StoreItem_Trailers) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[720]
+	mi := &file_common_proto_msgTypes[729]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -53950,7 +54368,7 @@ func (x *StoreItem_Trailers) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Trailers.ProtoReflect.Descriptor instead.
 func (*StoreItem_Trailers) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{720}
+	return file_common_proto_rawDescGZIP(), []int{729}
 }
 
 func (x *StoreItem_Trailers) GetHighlights() []*StoreItem_Trailers_Trailer {
@@ -53986,7 +54404,7 @@ type StoreItem_Trailers_Trailer struct {
 
 func (x *StoreItem_Trailers_Trailer) Reset() {
 	*x = StoreItem_Trailers_Trailer{}
-	mi := &file_common_proto_msgTypes[721]
+	mi := &file_common_proto_msgTypes[730]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -53998,7 +54416,7 @@ func (x *StoreItem_Trailers_Trailer) String() string {
 func (*StoreItem_Trailers_Trailer) ProtoMessage() {}
 
 func (x *StoreItem_Trailers_Trailer) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[721]
+	mi := &file_common_proto_msgTypes[730]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -54011,7 +54429,7 @@ func (x *StoreItem_Trailers_Trailer) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Trailers_Trailer.ProtoReflect.Descriptor instead.
 func (*StoreItem_Trailers_Trailer) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{721}
+	return file_common_proto_rawDescGZIP(), []int{730}
 }
 
 func (x *StoreItem_Trailers_Trailer) GetTrailerName() string {
@@ -54095,7 +54513,7 @@ type StoreItem_Trailers_VideoSource struct {
 
 func (x *StoreItem_Trailers_VideoSource) Reset() {
 	*x = StoreItem_Trailers_VideoSource{}
-	mi := &file_common_proto_msgTypes[722]
+	mi := &file_common_proto_msgTypes[731]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -54107,7 +54525,7 @@ func (x *StoreItem_Trailers_VideoSource) String() string {
 func (*StoreItem_Trailers_VideoSource) ProtoMessage() {}
 
 func (x *StoreItem_Trailers_VideoSource) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[722]
+	mi := &file_common_proto_msgTypes[731]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -54120,7 +54538,7 @@ func (x *StoreItem_Trailers_VideoSource) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItem_Trailers_VideoSource.ProtoReflect.Descriptor instead.
 func (*StoreItem_Trailers_VideoSource) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{722}
+	return file_common_proto_rawDescGZIP(), []int{731}
 }
 
 func (x *StoreItem_Trailers_VideoSource) GetFilename() string {
@@ -54152,7 +54570,7 @@ type StoreItemID struct {
 
 func (x *StoreItemID) Reset() {
 	*x = StoreItemID{}
-	mi := &file_common_proto_msgTypes[723]
+	mi := &file_common_proto_msgTypes[732]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -54164,7 +54582,7 @@ func (x *StoreItemID) String() string {
 func (*StoreItemID) ProtoMessage() {}
 
 func (x *StoreItemID) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[723]
+	mi := &file_common_proto_msgTypes[732]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -54177,7 +54595,7 @@ func (x *StoreItemID) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StoreItemID.ProtoReflect.Descriptor instead.
 func (*StoreItemID) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{723}
+	return file_common_proto_rawDescGZIP(), []int{732}
 }
 
 func (x *StoreItemID) GetAppid() uint32 {
@@ -54232,7 +54650,7 @@ type UserContentDescriptorPreferences struct {
 
 func (x *UserContentDescriptorPreferences) Reset() {
 	*x = UserContentDescriptorPreferences{}
-	mi := &file_common_proto_msgTypes[724]
+	mi := &file_common_proto_msgTypes[733]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -54244,7 +54662,7 @@ func (x *UserContentDescriptorPreferences) String() string {
 func (*UserContentDescriptorPreferences) ProtoMessage() {}
 
 func (x *UserContentDescriptorPreferences) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[724]
+	mi := &file_common_proto_msgTypes[733]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -54257,7 +54675,7 @@ func (x *UserContentDescriptorPreferences) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserContentDescriptorPreferences.ProtoReflect.Descriptor instead.
 func (*UserContentDescriptorPreferences) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{724}
+	return file_common_proto_rawDescGZIP(), []int{733}
 }
 
 func (x *UserContentDescriptorPreferences) GetContentDescriptorsToExclude() []*UserContentDescriptorPreferences_ContentDescriptor {
@@ -54278,7 +54696,7 @@ type UserContentDescriptorPreferences_ContentDescriptor struct {
 
 func (x *UserContentDescriptorPreferences_ContentDescriptor) Reset() {
 	*x = UserContentDescriptorPreferences_ContentDescriptor{}
-	mi := &file_common_proto_msgTypes[725]
+	mi := &file_common_proto_msgTypes[734]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -54290,7 +54708,7 @@ func (x *UserContentDescriptorPreferences_ContentDescriptor) String() string {
 func (*UserContentDescriptorPreferences_ContentDescriptor) ProtoMessage() {}
 
 func (x *UserContentDescriptorPreferences_ContentDescriptor) ProtoReflect() protoreflect.Message {
-	mi := &file_common_proto_msgTypes[725]
+	mi := &file_common_proto_msgTypes[734]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -54303,7 +54721,7 @@ func (x *UserContentDescriptorPreferences_ContentDescriptor) ProtoReflect() prot
 
 // Deprecated: Use UserContentDescriptorPreferences_ContentDescriptor.ProtoReflect.Descriptor instead.
 func (*UserContentDescriptorPreferences_ContentDescriptor) Descriptor() ([]byte, []int) {
-	return file_common_proto_rawDescGZIP(), []int{725}
+	return file_common_proto_rawDescGZIP(), []int{734}
 }
 
 func (x *UserContentDescriptorPreferences_ContentDescriptor) GetContentDescriptorid() uint32 {
@@ -58441,7 +58859,16 @@ const file_common_proto_rawDesc = "" +
 	"\x10color_foreground\x18\v \x01(\tR\x0fcolorForeground\x12)\n" +
 	"\x10color_background\x18\f \x01(\tR\x0fcolorBackground\x12\x1c\n" +
 	"\tquadrants\x18\r \x01(\rR\tquadrants\x12!\n" +
-	"\fbinding_type\x18\x0e \x01(\rR\vbindingType\"u\n" +
+	"\fbinding_type\x18\x0e \x01(\rR\vbindingType\"\x80\x01\n" +
+	"\x12CVRGamepadUI_Frame\x12\x19\n" +
+	"\bframe_id\x18\x01 \x01(\rR\aframeId\x121\n" +
+	"\x04menu\x18\x02 \x01(\v2\x1d.CVRGamepadUI_Frame_FrameMenuR\x04menu\x12\x1c\n" +
+	"\ttmp_title\x18\xe8\a \x01(\tR\btmpTitle\"X\n" +
+	"\x1cCVRGamepadUI_Frame_FrameMenu\x128\n" +
+	"\x05items\x18\x01 \x03(\v2\".CVRGamepadUI_Frame_FrameMenu_ItemR\x05items\"w\n" +
+	"!CVRGamepadUI_Frame_FrameMenu_Item\x124\n" +
+	"\btmp_icon\x18\xe8\a \x01(\v2\x18.CVRGamepadUIShared_IconR\atmpIcon\x12\x1c\n" +
+	"\ttmp_label\x18\xe9\a \x01(\tR\btmpLabel\"u\n" +
 	"3CVRGamepadUI_Message_DashboardActionInvoked_Request\x12\x1b\n" +
 	"\taction_id\x18\x01 \x01(\rR\bactionId\x12!\n" +
 	"\ftoggle_value\x18\x02 \x01(\bR\vtoggleValue\"6\n" +
@@ -58464,16 +58891,18 @@ const file_common_proto_rawDesc = "" +
 	"\n" +
 	"message_id\x18\x02 \x01(\rR\tmessageId\x123\n" +
 	"\x16response_to_message_id\x18\x03 \x01(\rR\x13responseToMessageId\x12*\n" +
-	"\x11is_error_response\x18\x04 \x01(\bR\x0fisErrorResponse\"n\n" +
-	"/CVRGamepadUI_Message_HideDashboardPopup_Request\x12;\n" +
-	"\x1adashboard_popup_request_id\x18\x01 \x01(\rR\x17dashboardPopupRequestId\"2\n" +
-	"0CVRGamepadUI_Message_HideDashboardPopup_Response\"\x82\x01\n" +
+	"\x11is_error_response\x18\x04 \x01(\bR\x0fisErrorResponse\"_\n" +
+	"/CVRGamepadUI_Message_HideDashboardPopup_Request\x12,\n" +
+	"\x12dashboard_popup_id\x18\x01 \x01(\rR\x10dashboardPopupId\"2\n" +
+	"0CVRGamepadUI_Message_HideDashboardPopup_Response\".\n" +
+	",CVRGamepadUI_Message_InitFrameSystem_Request\"/\n" +
+	"-CVRGamepadUI_Message_InitFrameSystem_Response\"\x82\x01\n" +
 	".CVRGamepadUI_Message_RemoteVideoStream_Request\x12)\n" +
 	"\x10source_accountid\x18\x01 \x01(\rR\x0fsourceAccountid\x12%\n" +
 	"\x0evideo_uniqueid\x18\x02 \x01(\tR\rvideoUniqueid\"1\n" +
-	"/CVRGamepadUI_Message_RemoteVideoStream_Response\"\xd9\a\n" +
-	"/CVRGamepadUI_Message_ShowDashboardPopup_Request\x12;\n" +
-	"\x1adashboard_popup_request_id\x18\x01 \x01(\rR\x17dashboardPopupRequestId\x12*\n" +
+	"/CVRGamepadUI_Message_RemoteVideoStream_Response\"\xca\a\n" +
+	"/CVRGamepadUI_Message_ShowDashboardPopup_Request\x12,\n" +
+	"\x12dashboard_popup_id\x18\x01 \x01(\rR\x10dashboardPopupId\x12*\n" +
 	"\x11popup_overlay_key\x18\x02 \x01(\tR\x0fpopupOverlayKey\x12,\n" +
 	"\x12parent_overlay_key\x18\x03 \x01(\tR\x10parentOverlayKey\x12m\n" +
 	"\x10origin_on_parent\x18\x04 \x01(\v2C.CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPositionR\x0eoriginOnParent\x12k\n" +
@@ -58518,7 +58947,15 @@ const file_common_proto_rawDesc = "" +
 	"(CVRGamepadUI_Message_ShowOverlay_Request\x12\x1f\n" +
 	"\voverlay_key\x18\x01 \x01(\tR\n" +
 	"overlayKey\"+\n" +
-	")CVRGamepadUI_Message_ShowOverlay_Response\"\xb0\x04\n" +
+	")CVRGamepadUI_Message_ShowOverlay_Response\"\x90\x01\n" +
+	"+CVRGamepadUI_Message_UpdateFrameUIs_Request\x12:\n" +
+	"\x0eupdated_frames\x18\x01 \x03(\v2\x13.CVRGamepadUI_FrameR\rupdatedFrames\x12%\n" +
+	"\x0edeleted_frames\x18\x02 \x03(\rR\rdeletedFrames\"\x89\x01\n" +
+	",CVRGamepadUI_Message_UpdateFrameUIs_Response\x12Y\n" +
+	"\aresults\x18\x01 \x03(\v2?.CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResultR\aresults\"\x9d\x01\n" +
+	">CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult\x12\x19\n" +
+	"\bframe_id\x18\x01 \x01(\rR\aframeId\x12@\n" +
+	"\x1dframe_menu_dashboard_popup_id\x18\x02 \x01(\rR\x19frameMenuDashboardPopupId\"\xb0\x04\n" +
 	"\"CVRGamepadUIShared_DashboardAction\x12\x1b\n" +
 	"\taction_id\x18\x01 \x01(\rR\bactionId\x127\n" +
 	"\x18visible_in_dashboard_bar\x18\x02 \x01(\bR\x15visibleInDashboardBar\x12\x18\n" +
@@ -58539,6 +58976,11 @@ const file_common_proto_rawDesc = "" +
 	"&CVRGamepadUIShared_DashboardActionIcon\x12\x1c\n" +
 	"\x04enum\x18\x01 \x01(\x05B\b\x82\xb5\x18\x04enumR\x04enum\"\x87\x01\n" +
 	"#CVRGamepadUIShared_DashboardTabIcon\x12\x1c\n" +
+	"\x04enum\x18\x01 \x01(\x05B\b\x82\xb5\x18\x04enumR\x04enum\x12\x14\n" +
+	"\x05appid\x18\x02 \x01(\rR\x05appid\x12\x18\n" +
+	"\aoverlay\x18\x03 \x01(\tR\aoverlay\x12\x12\n" +
+	"\x04hwnd\x18\x04 \x01(\rR\x04hwnd\"{\n" +
+	"\x17CVRGamepadUIShared_Icon\x12\x1c\n" +
 	"\x04enum\x18\x01 \x01(\x05B\b\x82\xb5\x18\x04enumR\x04enum\x12\x14\n" +
 	"\x05appid\x18\x02 \x01(\rR\x05appid\x12\x18\n" +
 	"\aoverlay\x18\x03 \x01(\tR\aoverlay\x12\x12\n" +
@@ -58790,27 +59232,22 @@ const file_common_proto_rawDesc = "" +
 	"\n" +
 	"windows_mr\x18* \x01(\bR\twindowsMr\x12\x1f\n" +
 	"\vvalve_index\x18+ \x01(\bR\n" +
-	"valveIndex\"\x93\f\n" +
+	"valveIndex\"\xd6\t\n" +
 	"\x18StoreItem_PurchaseOption\x12\x1c\n" +
 	"\tpackageid\x18\x01 \x01(\x05R\tpackageid\x12\x1a\n" +
 	"\bbundleid\x18\x02 \x01(\x05R\bbundleid\x120\n" +
 	"\x14purchase_option_name\x18\x03 \x01(\tR\x12purchaseOptionName\x12/\n" +
 	"\x14final_price_in_cents\x18\x05 \x01(\x03R\x11finalPriceInCents\x125\n" +
-	"\x17original_price_in_cents\x18\x06 \x01(\x03R\x14originalPriceInCents\x128\n" +
-	"\x19user_final_price_in_cents\x18\a \x01(\x03R\x15userFinalPriceInCents\x122\n" +
+	"\x17original_price_in_cents\x18\x06 \x01(\x03R\x14originalPriceInCents\x122\n" +
 	"\x15formatted_final_price\x18\b \x01(\tR\x13formattedFinalPrice\x128\n" +
 	"\x18formatted_original_price\x18\t \x01(\tR\x16formattedOriginalPrice\x12!\n" +
 	"\fdiscount_pct\x18\n" +
-	" \x01(\x05R\vdiscountPct\x12*\n" +
-	"\x11user_discount_pct\x18\v \x01(\x05R\x0fuserDiscountPct\x12.\n" +
+	" \x01(\x05R\vdiscountPct\x12.\n" +
 	"\x13bundle_discount_pct\x18\f \x01(\x05R\x11bundleDiscountPct\x12%\n" +
 	"\x0fis_free_to_keep\x18\r \x01(\bR\fisFreeToKeep\x12?\n" +
 	"\x1cprice_before_bundle_discount\x18\x0e \x01(\x03R\x19priceBeforeBundleDiscount\x12R\n" +
 	"&formatted_price_before_bundle_discount\x18\x0f \x01(\tR\"formattedPriceBeforeBundleDiscount\x12M\n" +
-	"\x10active_discounts\x18\x14 \x03(\v2\".StoreItem_PurchaseOption_DiscountR\x0factiveDiscounts\x12V\n" +
-	"\x15user_active_discounts\x18\x15 \x03(\v2\".StoreItem_PurchaseOption_DiscountR\x13userActiveDiscounts\x12Q\n" +
-	"\x12inactive_discounts\x18\x16 \x03(\v2\".StoreItem_PurchaseOption_DiscountR\x11inactiveDiscounts\x12*\n" +
-	"\x11user_can_purchase\x18\x1e \x01(\bR\x0fuserCanPurchase\x128\n" +
+	"\x10active_discounts\x18\x14 \x03(\v2\".StoreItem_PurchaseOption_DiscountR\x0factiveDiscounts\x128\n" +
 	"\x19user_can_purchase_as_gift\x18\x1f \x01(\bR\x15userCanPurchaseAsGift\x122\n" +
 	"\x15is_commercial_license\x18( \x01(\bR\x13isCommercialLicense\x12?\n" +
 	"\x1cshould_suppress_discount_pct\x18) \x01(\bR\x19shouldSuppressDiscountPct\x12M\n" +
@@ -58850,10 +59287,11 @@ const file_common_proto_rawDesc = "" +
 	" \x01(\bR\risEarlyAccess\x12(\n" +
 	"\x10mac_release_date\x18\x14 \x01(\rR\x0emacReleaseDate\x12,\n" +
 	"\x12linux_release_date\x18\x15 \x01(\rR\x10linuxReleaseDate\x122\n" +
-	"\x15limited_launch_active\x18\x16 \x01(\bR\x13limitedLaunchActive\"\xbb\x01\n" +
+	"\x15limited_launch_active\x18\x16 \x01(\bR\x13limitedLaunchActive\"\x9e\x02\n" +
 	"\x11StoreItem_Reviews\x12P\n" +
 	"\x10summary_filtered\x18\x01 \x01(\v2%.StoreItem_Reviews_StoreReviewSummaryR\x0fsummaryFiltered\x12T\n" +
-	"\x12summary_unfiltered\x18\x02 \x01(\v2%.StoreItem_Reviews_StoreReviewSummaryR\x11summaryUnfiltered\"\xcf\x01\n" +
+	"\x12summary_unfiltered\x18\x02 \x01(\v2%.StoreItem_Reviews_StoreReviewSummaryR\x11summaryUnfiltered\x12a\n" +
+	"\x19summary_language_specific\x18\x03 \x01(\v2%.StoreItem_Reviews_StoreReviewSummaryR\x17summaryLanguageSpecific\"\xcf\x01\n" +
 	"$StoreItem_Reviews_StoreReviewSummary\x12!\n" +
 	"\freview_count\x18\x01 \x01(\rR\vreviewCount\x12)\n" +
 	"\x10percent_positive\x18\x02 \x01(\x05R\x0fpercentPositive\x12+\n" +
@@ -58921,7 +59359,7 @@ func file_common_proto_rawDescGZIP() []byte {
 	return file_common_proto_rawDescData
 }
 
-var file_common_proto_msgTypes = make([]protoimpl.MessageInfo, 726)
+var file_common_proto_msgTypes = make([]protoimpl.MessageInfo, 735)
 var file_common_proto_goTypes = []any{
 	(*CAppBootstrapData)(nil),                                                            // 0: CAppBootstrapData
 	(*CAppOverview)(nil),                                                                 // 1: CAppOverview
@@ -59580,75 +60018,84 @@ var file_common_proto_goTypes = []any{
 	(*CVirtualMenuCreateDestroy)(nil),                                                    // 654: CVirtualMenuCreateDestroy
 	(*CVirtualMenuCreateDestroy_TouchMenuKey)(nil),                                       // 655: CVirtualMenuCreateDestroy_TouchMenuKey
 	(*CVirtualMenuKey)(nil),                                                              // 656: CVirtualMenuKey
-	(*CVRGamepadUI_Message_DashboardActionInvoked_Request)(nil),                          // 657: CVRGamepadUI_Message_DashboardActionInvoked_Request
-	(*CVRGamepadUI_Message_DashboardActionInvoked_Response)(nil),                         // 658: CVRGamepadUI_Message_DashboardActionInvoked_Response
-	(*CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request)(nil),                   // 659: CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request
-	(*CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response)(nil),                  // 660: CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response
-	(*CVRGamepadUI_Message_DashboardTabClicked_Request)(nil),                             // 661: CVRGamepadUI_Message_DashboardTabClicked_Request
-	(*CVRGamepadUI_Message_DashboardTabClicked_Response)(nil),                            // 662: CVRGamepadUI_Message_DashboardTabClicked_Response
-	(*CVRGamepadUI_Message_Error_Response)(nil),                                          // 663: CVRGamepadUI_Message_Error_Response
-	(*CVRGamepadUI_Message_ExecuteSteamURL_Request)(nil),                                 // 664: CVRGamepadUI_Message_ExecuteSteamURL_Request
-	(*CVRGamepadUI_Message_ExecuteSteamURL_Response)(nil),                                // 665: CVRGamepadUI_Message_ExecuteSteamURL_Response
-	(*CVRGamepadUI_Message_Header)(nil),                                                  // 666: CVRGamepadUI_Message_Header
-	(*CVRGamepadUI_Message_HideDashboardPopup_Request)(nil),                              // 667: CVRGamepadUI_Message_HideDashboardPopup_Request
-	(*CVRGamepadUI_Message_HideDashboardPopup_Response)(nil),                             // 668: CVRGamepadUI_Message_HideDashboardPopup_Response
-	(*CVRGamepadUI_Message_RemoteVideoStream_Request)(nil),                               // 669: CVRGamepadUI_Message_RemoteVideoStream_Request
-	(*CVRGamepadUI_Message_RemoteVideoStream_Response)(nil),                              // 670: CVRGamepadUI_Message_RemoteVideoStream_Response
-	(*CVRGamepadUI_Message_ShowDashboardPopup_Request)(nil),                              // 671: CVRGamepadUI_Message_ShowDashboardPopup_Request
-	(*CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition)(nil),           // 672: CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition
-	(*CVRGamepadUI_Message_ShowDashboardPopup_Request_Position)(nil),                     // 673: CVRGamepadUI_Message_ShowDashboardPopup_Request_Position
-	(*CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect)(nil),                         // 674: CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect
-	(*CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation)(nil),                     // 675: CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation
-	(*CVRGamepadUI_Message_ShowDashboardPopup_Response)(nil),                             // 676: CVRGamepadUI_Message_ShowDashboardPopup_Response
-	(*CVRGamepadUI_Message_ShowGame_Request)(nil),                                        // 677: CVRGamepadUI_Message_ShowGame_Request
-	(*CVRGamepadUI_Message_ShowGame_Response)(nil),                                       // 678: CVRGamepadUI_Message_ShowGame_Response
-	(*CVRGamepadUI_Message_ShowOverlay_Request)(nil),                                     // 679: CVRGamepadUI_Message_ShowOverlay_Request
-	(*CVRGamepadUI_Message_ShowOverlay_Response)(nil),                                    // 680: CVRGamepadUI_Message_ShowOverlay_Response
-	(*CVRGamepadUIShared_DashboardAction)(nil),                                           // 681: CVRGamepadUIShared_DashboardAction
-	(*CVRGamepadUIShared_DashboardActionIcon)(nil),                                       // 682: CVRGamepadUIShared_DashboardActionIcon
-	(*CVRGamepadUIShared_DashboardTabIcon)(nil),                                          // 683: CVRGamepadUIShared_DashboardTabIcon
-	(*CVRGamepadUIShared_PathProperty_DashboardActions)(nil),                             // 684: CVRGamepadUIShared_PathProperty_DashboardActions
-	(*CVRGamepadUIShared_PathProperty_DashboardTabs)(nil),                                // 685: CVRGamepadUIShared_PathProperty_DashboardTabs
-	(*CVRGamepadUIShared_PathProperty_DashboardTabs_Tab)(nil),                            // 686: CVRGamepadUIShared_PathProperty_DashboardTabs_Tab
-	(*CVRGamepadUIShared_PathProperty_DesktopWindows)(nil),                               // 687: CVRGamepadUIShared_PathProperty_DesktopWindows
-	(*CVRGamepadUIShared_PathProperty_DesktopWindows_Window)(nil),                        // 688: CVRGamepadUIShared_PathProperty_DesktopWindows_Window
-	(*CVRGamepadUIShared_PathProperty_PowerOptions)(nil),                                 // 689: CVRGamepadUIShared_PathProperty_PowerOptions
-	(*CVRGamepadUIShared_PathProperty_VRVersionInfo)(nil),                                // 690: CVRGamepadUIShared_PathProperty_VRVersionInfo
-	(*EncryptedAppTicket)(nil),                                                           // 691: EncryptedAppTicket
-	(*LoyaltyRewardDefinition)(nil),                                                      // 692: LoyaltyRewardDefinition
-	(*LoyaltyRewardDefinition_BadgeData)(nil),                                            // 693: LoyaltyRewardDefinition_BadgeData
-	(*LoyaltyRewardDefinition_CommunityItemData)(nil),                                    // 694: LoyaltyRewardDefinition_CommunityItemData
-	(*StoreBrowseContext)(nil),                                                           // 695: StoreBrowseContext
-	(*StoreBrowseFilterFailure)(nil),                                                     // 696: StoreBrowseFilterFailure
-	(*StoreBrowseItemDataRequest)(nil),                                                   // 697: StoreBrowseItemDataRequest
-	(*StoreGameRating)(nil),                                                              // 698: StoreGameRating
-	(*StoreItem)(nil),                                                                    // 699: StoreItem
-	(*StoreItem_Assets)(nil),                                                             // 700: StoreItem_Assets
-	(*StoreItem_BasicInfo)(nil),                                                          // 701: StoreItem_BasicInfo
-	(*StoreItem_BasicInfo_CreatorHomeLink)(nil),                                          // 702: StoreItem_BasicInfo_CreatorHomeLink
-	(*StoreItem_Categories)(nil),                                                         // 703: StoreItem_Categories
-	(*StoreItem_FreeWeekend)(nil),                                                        // 704: StoreItem_FreeWeekend
-	(*StoreItem_IncludedItems)(nil),                                                      // 705: StoreItem_IncludedItems
-	(*StoreItem_Link)(nil),                                                               // 706: StoreItem_Link
-	(*StoreItem_Platforms)(nil),                                                          // 707: StoreItem_Platforms
-	(*StoreItem_Platforms_VRSupport)(nil),                                                // 708: StoreItem_Platforms_VRSupport
-	(*StoreItem_PurchaseOption)(nil),                                                     // 709: StoreItem_PurchaseOption
-	(*StoreItem_PurchaseOption_Discount)(nil),                                            // 710: StoreItem_PurchaseOption_Discount
-	(*StoreItem_PurchaseOption_RecurrenceInfo)(nil),                                      // 711: StoreItem_PurchaseOption_RecurrenceInfo
-	(*StoreItem_RelatedItems)(nil),                                                       // 712: StoreItem_RelatedItems
-	(*StoreItem_ReleaseInfo)(nil),                                                        // 713: StoreItem_ReleaseInfo
-	(*StoreItem_Reviews)(nil),                                                            // 714: StoreItem_Reviews
-	(*StoreItem_Reviews_StoreReviewSummary)(nil),                                         // 715: StoreItem_Reviews_StoreReviewSummary
-	(*StoreItem_Screenshots)(nil),                                                        // 716: StoreItem_Screenshots
-	(*StoreItem_Screenshots_Screenshot)(nil),                                             // 717: StoreItem_Screenshots_Screenshot
-	(*StoreItem_SupportedLanguage)(nil),                                                  // 718: StoreItem_SupportedLanguage
-	(*StoreItem_Tag)(nil),                                                                // 719: StoreItem_Tag
-	(*StoreItem_Trailers)(nil),                                                           // 720: StoreItem_Trailers
-	(*StoreItem_Trailers_Trailer)(nil),                                                   // 721: StoreItem_Trailers_Trailer
-	(*StoreItem_Trailers_VideoSource)(nil),                                               // 722: StoreItem_Trailers_VideoSource
-	(*StoreItemID)(nil),                                                                  // 723: StoreItemID
-	(*UserContentDescriptorPreferences)(nil),                                             // 724: UserContentDescriptorPreferences
-	(*UserContentDescriptorPreferences_ContentDescriptor)(nil),                           // 725: UserContentDescriptorPreferences_ContentDescriptor
+	(*CVRGamepadUI_Frame)(nil),                                                           // 657: CVRGamepadUI_Frame
+	(*CVRGamepadUI_Frame_FrameMenu)(nil),                                                 // 658: CVRGamepadUI_Frame_FrameMenu
+	(*CVRGamepadUI_Frame_FrameMenu_Item)(nil),                                            // 659: CVRGamepadUI_Frame_FrameMenu_Item
+	(*CVRGamepadUI_Message_DashboardActionInvoked_Request)(nil),                          // 660: CVRGamepadUI_Message_DashboardActionInvoked_Request
+	(*CVRGamepadUI_Message_DashboardActionInvoked_Response)(nil),                         // 661: CVRGamepadUI_Message_DashboardActionInvoked_Response
+	(*CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request)(nil),                   // 662: CVRGamepadUI_Message_DashboardDesktopWindowClicked_Request
+	(*CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response)(nil),                  // 663: CVRGamepadUI_Message_DashboardDesktopWindowClicked_Response
+	(*CVRGamepadUI_Message_DashboardTabClicked_Request)(nil),                             // 664: CVRGamepadUI_Message_DashboardTabClicked_Request
+	(*CVRGamepadUI_Message_DashboardTabClicked_Response)(nil),                            // 665: CVRGamepadUI_Message_DashboardTabClicked_Response
+	(*CVRGamepadUI_Message_Error_Response)(nil),                                          // 666: CVRGamepadUI_Message_Error_Response
+	(*CVRGamepadUI_Message_ExecuteSteamURL_Request)(nil),                                 // 667: CVRGamepadUI_Message_ExecuteSteamURL_Request
+	(*CVRGamepadUI_Message_ExecuteSteamURL_Response)(nil),                                // 668: CVRGamepadUI_Message_ExecuteSteamURL_Response
+	(*CVRGamepadUI_Message_Header)(nil),                                                  // 669: CVRGamepadUI_Message_Header
+	(*CVRGamepadUI_Message_HideDashboardPopup_Request)(nil),                              // 670: CVRGamepadUI_Message_HideDashboardPopup_Request
+	(*CVRGamepadUI_Message_HideDashboardPopup_Response)(nil),                             // 671: CVRGamepadUI_Message_HideDashboardPopup_Response
+	(*CVRGamepadUI_Message_InitFrameSystem_Request)(nil),                                 // 672: CVRGamepadUI_Message_InitFrameSystem_Request
+	(*CVRGamepadUI_Message_InitFrameSystem_Response)(nil),                                // 673: CVRGamepadUI_Message_InitFrameSystem_Response
+	(*CVRGamepadUI_Message_RemoteVideoStream_Request)(nil),                               // 674: CVRGamepadUI_Message_RemoteVideoStream_Request
+	(*CVRGamepadUI_Message_RemoteVideoStream_Response)(nil),                              // 675: CVRGamepadUI_Message_RemoteVideoStream_Response
+	(*CVRGamepadUI_Message_ShowDashboardPopup_Request)(nil),                              // 676: CVRGamepadUI_Message_ShowDashboardPopup_Request
+	(*CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition)(nil),           // 677: CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition
+	(*CVRGamepadUI_Message_ShowDashboardPopup_Request_Position)(nil),                     // 678: CVRGamepadUI_Message_ShowDashboardPopup_Request_Position
+	(*CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect)(nil),                         // 679: CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect
+	(*CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation)(nil),                     // 680: CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation
+	(*CVRGamepadUI_Message_ShowDashboardPopup_Response)(nil),                             // 681: CVRGamepadUI_Message_ShowDashboardPopup_Response
+	(*CVRGamepadUI_Message_ShowGame_Request)(nil),                                        // 682: CVRGamepadUI_Message_ShowGame_Request
+	(*CVRGamepadUI_Message_ShowGame_Response)(nil),                                       // 683: CVRGamepadUI_Message_ShowGame_Response
+	(*CVRGamepadUI_Message_ShowOverlay_Request)(nil),                                     // 684: CVRGamepadUI_Message_ShowOverlay_Request
+	(*CVRGamepadUI_Message_ShowOverlay_Response)(nil),                                    // 685: CVRGamepadUI_Message_ShowOverlay_Response
+	(*CVRGamepadUI_Message_UpdateFrameUIs_Request)(nil),                                  // 686: CVRGamepadUI_Message_UpdateFrameUIs_Request
+	(*CVRGamepadUI_Message_UpdateFrameUIs_Response)(nil),                                 // 687: CVRGamepadUI_Message_UpdateFrameUIs_Response
+	(*CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult)(nil),               // 688: CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult
+	(*CVRGamepadUIShared_DashboardAction)(nil),                                           // 689: CVRGamepadUIShared_DashboardAction
+	(*CVRGamepadUIShared_DashboardActionIcon)(nil),                                       // 690: CVRGamepadUIShared_DashboardActionIcon
+	(*CVRGamepadUIShared_DashboardTabIcon)(nil),                                          // 691: CVRGamepadUIShared_DashboardTabIcon
+	(*CVRGamepadUIShared_Icon)(nil),                                                      // 692: CVRGamepadUIShared_Icon
+	(*CVRGamepadUIShared_PathProperty_DashboardActions)(nil),                             // 693: CVRGamepadUIShared_PathProperty_DashboardActions
+	(*CVRGamepadUIShared_PathProperty_DashboardTabs)(nil),                                // 694: CVRGamepadUIShared_PathProperty_DashboardTabs
+	(*CVRGamepadUIShared_PathProperty_DashboardTabs_Tab)(nil),                            // 695: CVRGamepadUIShared_PathProperty_DashboardTabs_Tab
+	(*CVRGamepadUIShared_PathProperty_DesktopWindows)(nil),                               // 696: CVRGamepadUIShared_PathProperty_DesktopWindows
+	(*CVRGamepadUIShared_PathProperty_DesktopWindows_Window)(nil),                        // 697: CVRGamepadUIShared_PathProperty_DesktopWindows_Window
+	(*CVRGamepadUIShared_PathProperty_PowerOptions)(nil),                                 // 698: CVRGamepadUIShared_PathProperty_PowerOptions
+	(*CVRGamepadUIShared_PathProperty_VRVersionInfo)(nil),                                // 699: CVRGamepadUIShared_PathProperty_VRVersionInfo
+	(*EncryptedAppTicket)(nil),                                                           // 700: EncryptedAppTicket
+	(*LoyaltyRewardDefinition)(nil),                                                      // 701: LoyaltyRewardDefinition
+	(*LoyaltyRewardDefinition_BadgeData)(nil),                                            // 702: LoyaltyRewardDefinition_BadgeData
+	(*LoyaltyRewardDefinition_CommunityItemData)(nil),                                    // 703: LoyaltyRewardDefinition_CommunityItemData
+	(*StoreBrowseContext)(nil),                                                           // 704: StoreBrowseContext
+	(*StoreBrowseFilterFailure)(nil),                                                     // 705: StoreBrowseFilterFailure
+	(*StoreBrowseItemDataRequest)(nil),                                                   // 706: StoreBrowseItemDataRequest
+	(*StoreGameRating)(nil),                                                              // 707: StoreGameRating
+	(*StoreItem)(nil),                                                                    // 708: StoreItem
+	(*StoreItem_Assets)(nil),                                                             // 709: StoreItem_Assets
+	(*StoreItem_BasicInfo)(nil),                                                          // 710: StoreItem_BasicInfo
+	(*StoreItem_BasicInfo_CreatorHomeLink)(nil),                                          // 711: StoreItem_BasicInfo_CreatorHomeLink
+	(*StoreItem_Categories)(nil),                                                         // 712: StoreItem_Categories
+	(*StoreItem_FreeWeekend)(nil),                                                        // 713: StoreItem_FreeWeekend
+	(*StoreItem_IncludedItems)(nil),                                                      // 714: StoreItem_IncludedItems
+	(*StoreItem_Link)(nil),                                                               // 715: StoreItem_Link
+	(*StoreItem_Platforms)(nil),                                                          // 716: StoreItem_Platforms
+	(*StoreItem_Platforms_VRSupport)(nil),                                                // 717: StoreItem_Platforms_VRSupport
+	(*StoreItem_PurchaseOption)(nil),                                                     // 718: StoreItem_PurchaseOption
+	(*StoreItem_PurchaseOption_Discount)(nil),                                            // 719: StoreItem_PurchaseOption_Discount
+	(*StoreItem_PurchaseOption_RecurrenceInfo)(nil),                                      // 720: StoreItem_PurchaseOption_RecurrenceInfo
+	(*StoreItem_RelatedItems)(nil),                                                       // 721: StoreItem_RelatedItems
+	(*StoreItem_ReleaseInfo)(nil),                                                        // 722: StoreItem_ReleaseInfo
+	(*StoreItem_Reviews)(nil),                                                            // 723: StoreItem_Reviews
+	(*StoreItem_Reviews_StoreReviewSummary)(nil),                                         // 724: StoreItem_Reviews_StoreReviewSummary
+	(*StoreItem_Screenshots)(nil),                                                        // 725: StoreItem_Screenshots
+	(*StoreItem_Screenshots_Screenshot)(nil),                                             // 726: StoreItem_Screenshots_Screenshot
+	(*StoreItem_SupportedLanguage)(nil),                                                  // 727: StoreItem_SupportedLanguage
+	(*StoreItem_Tag)(nil),                                                                // 728: StoreItem_Tag
+	(*StoreItem_Trailers)(nil),                                                           // 729: StoreItem_Trailers
+	(*StoreItem_Trailers_Trailer)(nil),                                                   // 730: StoreItem_Trailers_Trailer
+	(*StoreItem_Trailers_VideoSource)(nil),                                               // 731: StoreItem_Trailers_VideoSource
+	(*StoreItemID)(nil),                                                                  // 732: StoreItemID
+	(*UserContentDescriptorPreferences)(nil),                                             // 733: UserContentDescriptorPreferences
+	(*UserContentDescriptorPreferences_ContentDescriptor)(nil),                           // 734: UserContentDescriptorPreferences_ContentDescriptor
 }
 var file_common_proto_depIdxs = []int32{
 	2,   // 0: CAppOverview.association:type_name -> CAppOverview_AppAssociation
@@ -59742,7 +60189,7 @@ var file_common_proto_depIdxs = []int32{
 	284, // 88: CMsgClientPICSProductInfoResponse.packages:type_name -> CMsgClientPICSProductInfoResponse_PackageInfo
 	286, // 89: CMsgClientPlayerNicknameList.nicknames:type_name -> CMsgClientPlayerNicknameList_PlayerNickname
 	306, // 90: CMsgClientRequestedClientStats.stats_to_send:type_name -> CMsgClientRequestedClientStats_StatsToSend
-	691, // 91: CMsgClientRequestEncryptedAppTicketResponse.encrypted_app_ticket:type_name -> EncryptedAppTicket
+	700, // 91: CMsgClientRequestEncryptedAppTicketResponse.encrypted_app_ticket:type_name -> EncryptedAppTicket
 	321, // 92: CMsgClientRichPresenceInfo.rich_presence:type_name -> CMsgClientRichPresenceInfo_RichPresence
 	328, // 93: CMsgClientServersAvailable.server_types_available:type_name -> CMsgClientServersAvailable_Server_Types_Available
 	518, // 94: CMsgClientSettings.overlay_key:type_name -> CMsgHotkey
@@ -59887,10 +60334,10 @@ var file_common_proto_depIdxs = []int32{
 	600, // 233: CSteamVR_AudioSettings_Settings.audio_mirror:type_name -> CSteamVR_AudioSettings_Settings_Channel
 	600, // 234: CSteamVR_AudioSettings_Settings.microphone:type_name -> CSteamVR_AudioSettings_Settings_Channel
 	599, // 235: CSteamVR_AudioSettings_SettingsChanged_Notification.settings:type_name -> CSteamVR_AudioSettings_Settings
-	723, // 236: CStoreBrowse_GetItems_Request.ids:type_name -> StoreItemID
-	695, // 237: CStoreBrowse_GetItems_Request.context:type_name -> StoreBrowseContext
-	697, // 238: CStoreBrowse_GetItems_Request.data_request:type_name -> StoreBrowseItemDataRequest
-	699, // 239: CStoreBrowse_GetItems_Response.store_items:type_name -> StoreItem
+	732, // 236: CStoreBrowse_GetItems_Request.ids:type_name -> StoreItemID
+	704, // 237: CStoreBrowse_GetItems_Request.context:type_name -> StoreBrowseContext
+	706, // 238: CStoreBrowse_GetItems_Request.data_request:type_name -> StoreBrowseItemDataRequest
+	708, // 239: CStoreBrowse_GetItems_Response.store_items:type_name -> StoreItem
 	643, // 240: CStorePageFilter.sale_filter:type_name -> CStorePageFilter_SalePageFilter
 	641, // 241: CStorePageFilter.content_hub_filter:type_name -> CStorePageFilter_ContentHubFilter
 	644, // 242: CStorePageFilter.store_filters:type_name -> CStorePageFilter_StoreFilter
@@ -59902,66 +60349,70 @@ var file_common_proto_depIdxs = []int32{
 	648, // 248: CStreamVideoLimit.mode:type_name -> CStreamVideoMode
 	651, // 249: CUserInterface_NavData.curator_data:type_name -> CUserInterface_CuratorData
 	655, // 250: CVirtualMenuCreateDestroy.popup_keys:type_name -> CVirtualMenuCreateDestroy_TouchMenuKey
-	672, // 251: CVRGamepadUI_Message_ShowDashboardPopup_Request.origin_on_parent:type_name -> CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition
-	672, // 252: CVRGamepadUI_Message_ShowDashboardPopup_Request.origin_on_popup:type_name -> CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition
-	673, // 253: CVRGamepadUI_Message_ShowDashboardPopup_Request.offset:type_name -> CVRGamepadUI_Message_ShowDashboardPopup_Request_Position
-	675, // 254: CVRGamepadUI_Message_ShowDashboardPopup_Request.rotation:type_name -> CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation
-	674, // 255: CVRGamepadUI_Message_ShowDashboardPopup_Request.clip_rect:type_name -> CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect
-	682, // 256: CVRGamepadUIShared_DashboardAction.icon:type_name -> CVRGamepadUIShared_DashboardActionIcon
-	682, // 257: CVRGamepadUIShared_DashboardAction.icon_active:type_name -> CVRGamepadUIShared_DashboardActionIcon
-	681, // 258: CVRGamepadUIShared_PathProperty_DashboardActions.actions:type_name -> CVRGamepadUIShared_DashboardAction
-	686, // 259: CVRGamepadUIShared_PathProperty_DashboardTabs.tabs:type_name -> CVRGamepadUIShared_PathProperty_DashboardTabs_Tab
-	683, // 260: CVRGamepadUIShared_PathProperty_DashboardTabs_Tab.icon:type_name -> CVRGamepadUIShared_DashboardTabIcon
-	688, // 261: CVRGamepadUIShared_PathProperty_DesktopWindows.windows:type_name -> CVRGamepadUIShared_PathProperty_DesktopWindows_Window
-	694, // 262: LoyaltyRewardDefinition.community_item_data:type_name -> LoyaltyRewardDefinition_CommunityItemData
-	693, // 263: LoyaltyRewardDefinition_CommunityItemData.badge_data:type_name -> LoyaltyRewardDefinition_BadgeData
-	697, // 264: StoreBrowseItemDataRequest.included_item_data_request:type_name -> StoreBrowseItemDataRequest
-	712, // 265: StoreItem.related_items:type_name -> StoreItem_RelatedItems
-	705, // 266: StoreItem.included_items:type_name -> StoreItem_IncludedItems
-	703, // 267: StoreItem.categories:type_name -> StoreItem_Categories
-	714, // 268: StoreItem.reviews:type_name -> StoreItem_Reviews
-	701, // 269: StoreItem.basic_info:type_name -> StoreItem_BasicInfo
-	719, // 270: StoreItem.tags:type_name -> StoreItem_Tag
-	700, // 271: StoreItem.assets:type_name -> StoreItem_Assets
-	713, // 272: StoreItem.release:type_name -> StoreItem_ReleaseInfo
-	707, // 273: StoreItem.platforms:type_name -> StoreItem_Platforms
-	698, // 274: StoreItem.game_rating:type_name -> StoreGameRating
-	709, // 275: StoreItem.best_purchase_option:type_name -> StoreItem_PurchaseOption
-	709, // 276: StoreItem.purchase_options:type_name -> StoreItem_PurchaseOption
-	709, // 277: StoreItem.accessories:type_name -> StoreItem_PurchaseOption
-	709, // 278: StoreItem.self_purchase_option:type_name -> StoreItem_PurchaseOption
-	716, // 279: StoreItem.screenshots:type_name -> StoreItem_Screenshots
-	720, // 280: StoreItem.trailers:type_name -> StoreItem_Trailers
-	718, // 281: StoreItem.supported_languages:type_name -> StoreItem_SupportedLanguage
-	704, // 282: StoreItem.free_weekend:type_name -> StoreItem_FreeWeekend
-	700, // 283: StoreItem.assets_without_overrides:type_name -> StoreItem_Assets
-	696, // 284: StoreItem.user_filter_failure:type_name -> StoreBrowseFilterFailure
-	706, // 285: StoreItem.links:type_name -> StoreItem_Link
-	702, // 286: StoreItem_BasicInfo.publishers:type_name -> StoreItem_BasicInfo_CreatorHomeLink
-	702, // 287: StoreItem_BasicInfo.developers:type_name -> StoreItem_BasicInfo_CreatorHomeLink
-	702, // 288: StoreItem_BasicInfo.franchises:type_name -> StoreItem_BasicInfo_CreatorHomeLink
-	699, // 289: StoreItem_IncludedItems.included_apps:type_name -> StoreItem
-	699, // 290: StoreItem_IncludedItems.included_packages:type_name -> StoreItem
-	708, // 291: StoreItem_Platforms.vr_support:type_name -> StoreItem_Platforms_VRSupport
-	710, // 292: StoreItem_PurchaseOption.active_discounts:type_name -> StoreItem_PurchaseOption_Discount
-	710, // 293: StoreItem_PurchaseOption.user_active_discounts:type_name -> StoreItem_PurchaseOption_Discount
-	710, // 294: StoreItem_PurchaseOption.inactive_discounts:type_name -> StoreItem_PurchaseOption_Discount
-	711, // 295: StoreItem_PurchaseOption.recurrence_info:type_name -> StoreItem_PurchaseOption_RecurrenceInfo
-	715, // 296: StoreItem_Reviews.summary_filtered:type_name -> StoreItem_Reviews_StoreReviewSummary
-	715, // 297: StoreItem_Reviews.summary_unfiltered:type_name -> StoreItem_Reviews_StoreReviewSummary
-	717, // 298: StoreItem_Screenshots.all_ages_screenshots:type_name -> StoreItem_Screenshots_Screenshot
-	717, // 299: StoreItem_Screenshots.mature_content_screenshots:type_name -> StoreItem_Screenshots_Screenshot
-	721, // 300: StoreItem_Trailers.highlights:type_name -> StoreItem_Trailers_Trailer
-	721, // 301: StoreItem_Trailers.other_trailers:type_name -> StoreItem_Trailers_Trailer
-	722, // 302: StoreItem_Trailers_Trailer.trailer_480p:type_name -> StoreItem_Trailers_VideoSource
-	722, // 303: StoreItem_Trailers_Trailer.trailer_max:type_name -> StoreItem_Trailers_VideoSource
-	722, // 304: StoreItem_Trailers_Trailer.microtrailer:type_name -> StoreItem_Trailers_VideoSource
-	725, // 305: UserContentDescriptorPreferences.content_descriptors_to_exclude:type_name -> UserContentDescriptorPreferences_ContentDescriptor
-	306, // [306:306] is the sub-list for method output_type
-	306, // [306:306] is the sub-list for method input_type
-	306, // [306:306] is the sub-list for extension type_name
-	306, // [306:306] is the sub-list for extension extendee
-	0,   // [0:306] is the sub-list for field type_name
+	658, // 251: CVRGamepadUI_Frame.menu:type_name -> CVRGamepadUI_Frame_FrameMenu
+	659, // 252: CVRGamepadUI_Frame_FrameMenu.items:type_name -> CVRGamepadUI_Frame_FrameMenu_Item
+	692, // 253: CVRGamepadUI_Frame_FrameMenu_Item.tmp_icon:type_name -> CVRGamepadUIShared_Icon
+	677, // 254: CVRGamepadUI_Message_ShowDashboardPopup_Request.origin_on_parent:type_name -> CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition
+	677, // 255: CVRGamepadUI_Message_ShowDashboardPopup_Request.origin_on_popup:type_name -> CVRGamepadUI_Message_ShowDashboardPopup_Request_NormalizedPosition
+	678, // 256: CVRGamepadUI_Message_ShowDashboardPopup_Request.offset:type_name -> CVRGamepadUI_Message_ShowDashboardPopup_Request_Position
+	680, // 257: CVRGamepadUI_Message_ShowDashboardPopup_Request.rotation:type_name -> CVRGamepadUI_Message_ShowDashboardPopup_Request_Rotation
+	679, // 258: CVRGamepadUI_Message_ShowDashboardPopup_Request.clip_rect:type_name -> CVRGamepadUI_Message_ShowDashboardPopup_Request_Rect
+	657, // 259: CVRGamepadUI_Message_UpdateFrameUIs_Request.updated_frames:type_name -> CVRGamepadUI_Frame
+	688, // 260: CVRGamepadUI_Message_UpdateFrameUIs_Response.results:type_name -> CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult
+	690, // 261: CVRGamepadUIShared_DashboardAction.icon:type_name -> CVRGamepadUIShared_DashboardActionIcon
+	690, // 262: CVRGamepadUIShared_DashboardAction.icon_active:type_name -> CVRGamepadUIShared_DashboardActionIcon
+	689, // 263: CVRGamepadUIShared_PathProperty_DashboardActions.actions:type_name -> CVRGamepadUIShared_DashboardAction
+	695, // 264: CVRGamepadUIShared_PathProperty_DashboardTabs.tabs:type_name -> CVRGamepadUIShared_PathProperty_DashboardTabs_Tab
+	691, // 265: CVRGamepadUIShared_PathProperty_DashboardTabs_Tab.icon:type_name -> CVRGamepadUIShared_DashboardTabIcon
+	697, // 266: CVRGamepadUIShared_PathProperty_DesktopWindows.windows:type_name -> CVRGamepadUIShared_PathProperty_DesktopWindows_Window
+	703, // 267: LoyaltyRewardDefinition.community_item_data:type_name -> LoyaltyRewardDefinition_CommunityItemData
+	702, // 268: LoyaltyRewardDefinition_CommunityItemData.badge_data:type_name -> LoyaltyRewardDefinition_BadgeData
+	706, // 269: StoreBrowseItemDataRequest.included_item_data_request:type_name -> StoreBrowseItemDataRequest
+	721, // 270: StoreItem.related_items:type_name -> StoreItem_RelatedItems
+	714, // 271: StoreItem.included_items:type_name -> StoreItem_IncludedItems
+	712, // 272: StoreItem.categories:type_name -> StoreItem_Categories
+	723, // 273: StoreItem.reviews:type_name -> StoreItem_Reviews
+	710, // 274: StoreItem.basic_info:type_name -> StoreItem_BasicInfo
+	728, // 275: StoreItem.tags:type_name -> StoreItem_Tag
+	709, // 276: StoreItem.assets:type_name -> StoreItem_Assets
+	722, // 277: StoreItem.release:type_name -> StoreItem_ReleaseInfo
+	716, // 278: StoreItem.platforms:type_name -> StoreItem_Platforms
+	707, // 279: StoreItem.game_rating:type_name -> StoreGameRating
+	718, // 280: StoreItem.best_purchase_option:type_name -> StoreItem_PurchaseOption
+	718, // 281: StoreItem.purchase_options:type_name -> StoreItem_PurchaseOption
+	718, // 282: StoreItem.accessories:type_name -> StoreItem_PurchaseOption
+	718, // 283: StoreItem.self_purchase_option:type_name -> StoreItem_PurchaseOption
+	725, // 284: StoreItem.screenshots:type_name -> StoreItem_Screenshots
+	729, // 285: StoreItem.trailers:type_name -> StoreItem_Trailers
+	727, // 286: StoreItem.supported_languages:type_name -> StoreItem_SupportedLanguage
+	713, // 287: StoreItem.free_weekend:type_name -> StoreItem_FreeWeekend
+	709, // 288: StoreItem.assets_without_overrides:type_name -> StoreItem_Assets
+	705, // 289: StoreItem.user_filter_failure:type_name -> StoreBrowseFilterFailure
+	715, // 290: StoreItem.links:type_name -> StoreItem_Link
+	711, // 291: StoreItem_BasicInfo.publishers:type_name -> StoreItem_BasicInfo_CreatorHomeLink
+	711, // 292: StoreItem_BasicInfo.developers:type_name -> StoreItem_BasicInfo_CreatorHomeLink
+	711, // 293: StoreItem_BasicInfo.franchises:type_name -> StoreItem_BasicInfo_CreatorHomeLink
+	708, // 294: StoreItem_IncludedItems.included_apps:type_name -> StoreItem
+	708, // 295: StoreItem_IncludedItems.included_packages:type_name -> StoreItem
+	717, // 296: StoreItem_Platforms.vr_support:type_name -> StoreItem_Platforms_VRSupport
+	719, // 297: StoreItem_PurchaseOption.active_discounts:type_name -> StoreItem_PurchaseOption_Discount
+	720, // 298: StoreItem_PurchaseOption.recurrence_info:type_name -> StoreItem_PurchaseOption_RecurrenceInfo
+	724, // 299: StoreItem_Reviews.summary_filtered:type_name -> StoreItem_Reviews_StoreReviewSummary
+	724, // 300: StoreItem_Reviews.summary_unfiltered:type_name -> StoreItem_Reviews_StoreReviewSummary
+	724, // 301: StoreItem_Reviews.summary_language_specific:type_name -> StoreItem_Reviews_StoreReviewSummary
+	726, // 302: StoreItem_Screenshots.all_ages_screenshots:type_name -> StoreItem_Screenshots_Screenshot
+	726, // 303: StoreItem_Screenshots.mature_content_screenshots:type_name -> StoreItem_Screenshots_Screenshot
+	730, // 304: StoreItem_Trailers.highlights:type_name -> StoreItem_Trailers_Trailer
+	730, // 305: StoreItem_Trailers.other_trailers:type_name -> StoreItem_Trailers_Trailer
+	731, // 306: StoreItem_Trailers_Trailer.trailer_480p:type_name -> StoreItem_Trailers_VideoSource
+	731, // 307: StoreItem_Trailers_Trailer.trailer_max:type_name -> StoreItem_Trailers_VideoSource
+	731, // 308: StoreItem_Trailers_Trailer.microtrailer:type_name -> StoreItem_Trailers_VideoSource
+	734, // 309: UserContentDescriptorPreferences.content_descriptors_to_exclude:type_name -> UserContentDescriptorPreferences_ContentDescriptor
+	310, // [310:310] is the sub-list for method output_type
+	310, // [310:310] is the sub-list for method input_type
+	310, // [310:310] is the sub-list for extension type_name
+	310, // [310:310] is the sub-list for extension extendee
+	0,   // [0:310] is the sub-list for field type_name
 }
 
 func init() { file_common_proto_init() }
@@ -59976,7 +60427,7 @@ func file_common_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_common_proto_rawDesc), len(file_common_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   726,
+			NumMessages:   735,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
